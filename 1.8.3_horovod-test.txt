@@ -1,0 +1,815 @@
+Exec: NCCL_DEBUG=INFO HOROVOD_NUM_NCCL_STREAMS=4 horovodrun -np 16 -H localhost:8,172.31.3.127:8 --mpi-args="-x PATH -x LD_LIBRARY_PATH -x FI_PROVIDER=efa -x FI_EFA_TX_MIN_CREDITS=64 -x NCCL_TREE_THRESHOLD=0" python3 /home/cluster/distributed-training/test_scripts/pytorch_synthetic_benchmark.py --model resnet101 --batch-size 32 |& grep -v "Read -1"
+---------- training log
+[ip-172-31-6-189:00144] Warning: could not find environment variable "LD_LIBRARY_PATH"
+Warning: Permanently added '[172.31.3.127]:2022' (RSA) to the list of known hosts.
+[1,8]<stdout>:/home/cluster/horovod_logs/hooks/hook-20200812-030452-rank8.log
+[1,8]<stdout>:create dir: /home/cluster/horovod_logs/mpi_events/, status: 1
+[1,8]<stdout>:logfile/home/cluster/horovod_logs/mpi_events/mpi-20200812-030452-rank8.log
+[1,3]<stdout>:/home/cluster/horovod_logs/hooks/hook-20200812-030452-rank3.log
+[1,3]<stdout>:create dir: /home/cluster/horovod_logs/mpi_events/, status: 1
+[1,3]<stdout>:logfile/home/cluster/horovod_logs/mpi_events/mpi-20200812-030452-rank3.log
+[1,13]<stdout>:/home/cluster/horovod_logs/hooks/hook-20200812-030452-rank13.log
+[1,5]<stdout>:/home/cluster/horovod_logs/hooks/hook-20200812-030452-rank5.log
+[1,0]<stdout>:/home/cluster/horovod_logs/hooks/hook-20200812-030452-rank0.log
+[1,13]<stdout>:create dir: /home/cluster/horovod_logs/mpi_events/, status: 1
+[1,13]<stdout>:logfile/home/cluster/horovod_logs/mpi_events/mpi-20200812-030452-rank13.log
+[1,1]<stdout>:/home/cluster/horovod_logs/hooks/hook-20200812-030452-rank1.log
+[1,10]<stdout>:/home/cluster/horovod_logs/hooks/hook-20200812-030452-rank10.log
+[1,5]<stdout>:create dir: /home/cluster/horovod_logs/mpi_events/, status: 1
+[1,5]<stdout>:logfile/home/cluster/horovod_logs/mpi_events/mpi-20200812-030452-rank5.log
+[1,7]<stdout>:/home/cluster/horovod_logs/hooks/hook-20200812-030452-rank7.log
+[1,15]<stdout>:/home/cluster/horovod_logs/hooks/hook-20200812-030452-rank15.log
+[1,4]<stdout>:/home/cluster/horovod_logs/hooks/hook-20200812-030452-rank4.log
+[1,2]<stdout>:/home/cluster/horovod_logs/hooks/hook-20200812-030452-rank2.log
+[1,10]<stdout>:create dir: /home/cluster/horovod_logs/mpi_events/, status: 1
+[1,10]<stdout>:logfile/home/cluster/horovod_logs/mpi_events/mpi-20200812-030452-rank10.log
+[1,1]<stdout>:create dir: /home/cluster/horovod_logs/mpi_events/, status: 1
+[1,1]<stdout>:logfile/home/cluster/horovod_logs/mpi_events/mpi-20200812-030452-rank1.log
+[1,15]<stdout>:create dir: /home/cluster/horovod_logs/mpi_events/, status: 1
+[1,15]<stdout>:logfile/home/cluster/horovod_logs/mpi_events/mpi-20200812-030452-rank15.log
+[1,12]<stdout>:/home/cluster/horovod_logs/hooks/hook-20200812-030452-rank12.log
+[1,0]<stdout>:create dir: /home/cluster/horovod_logs/mpi_events/, status: 1
+[1,0]<stdout>:logfile/home/cluster/horovod_logs/mpi_events/mpi-20200812-030452-rank0.log
+[1,14]<stdout>:/home/cluster/horovod_logs/hooks/hook-20200812-030452-rank14.log
+[1,7]<stdout>:create dir: /home/cluster/horovod_logs/mpi_events/, status: 1
+[1,7]<stdout>:logfile/home/cluster/horovod_logs/mpi_events/mpi-20200812-030452-rank7.log
+[1,4]<stdout>:create dir: /home/cluster/horovod_logs/mpi_events/, status: 1
+[1,4]<stdout>:logfile/home/cluster/horovod_logs/mpi_events/mpi-20200812-030452-rank4.log
+[1,2]<stdout>:create dir: /home/cluster/horovod_logs/mpi_events/, status: 1
+[1,2]<stdout>:logfile/home/cluster/horovod_logs/mpi_events/mpi-20200812-030452-rank2.log
+[1,12]<stdout>:create dir: /home/cluster/horovod_logs/mpi_events/, status: 1
+[1,12]<stdout>:logfile/home/cluster/horovod_logs/mpi_events/mpi-20200812-030452-rank12.log
+[1,14]<stdout>:create dir: /home/cluster/horovod_logs/mpi_events/, status: 1
+[1,14]<stdout>:logfile/home/cluster/horovod_logs/mpi_events/mpi-20200812-030452-rank14.log
+[1,11]<stdout>:/home/cluster/horovod_logs/hooks/hook-20200812-030452-rank11.log
+[1,6]<stdout>:/home/cluster/horovod_logs/hooks/hook-20200812-030452-rank6.log
+[1,9]<stdout>:/home/cluster/horovod_logs/hooks/hook-20200812-030452-rank9.log
+[1,11]<stdout>:create dir: /home/cluster/horovod_logs/mpi_events/, status: 1
+[1,11]<stdout>:logfile/home/cluster/horovod_logs/mpi_events/mpi-20200812-030452-rank11.log
+[1,6]<stdout>:create dir: /home/cluster/horovod_logs/mpi_events/, status: 1
+[1,6]<stdout>:logfile/home/cluster/horovod_logs/mpi_events/mpi-20200812-030453-rank6.log
+[1,9]<stdout>:create dir: /home/cluster/horovod_logs/mpi_events/, status: 1
+[1,9]<stdout>:logfile/home/cluster/horovod_logs/mpi_events/mpi-20200812-030453-rank9.log
+[1,0]<stdout>:Model: resnet101
+[1,0]<stdout>:Batch size: 32
+[1,0]<stdout>:Number of GPUs: 16
+[1,0]<stdout>:Running warmup...
+[1,0]<stdout>:ip-172-31-6-189:149:685 [0] NCCL INFO Bootstrap : Using [0]ens5:172.31.6.189<0>
+[1,0]<stderr>:terminate called after throwing an instance of 'std::system_error'
+[1,0]<stderr>:  what():  Resource deadlock avoided
+[1,0]<stderr>:[ip-172-31-6-189:00789] *** Process received signal ***
+[1,0]<stderr>:[ip-172-31-6-189:00789] Signal: Aborted (6)
+[1,0]<stderr>:[ip-172-31-6-189:00789] Signal code:  (-6)
+[1,0]<stderr>:[ip-172-31-6-189:00789] [ 0] [1,0]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(+0x3ef20)[0x7f17f5b34f20]
+[1,0]<stderr>:[ip-172-31-6-189:00789] [ 1] [1,0]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(gsignal+0xc7)[0x7f17f5b34e97]
+[1,0]<stderr>:[ip-172-31-6-189:00789] [ 2] [1,0]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(abort+0x141)[0x7f17f5b36801]
+[1,0]<stderr>:[ip-172-31-6-189:00789] [ 3] [1,0]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x8c957)[0x7f17f0d40957]
+[1,0]<stderr>:[ip-172-31-6-189:00789] [ 4] [1,0]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x92ab6)[0x7f17f0d46ab6]
+[1,0]<stderr>:[ip-172-31-6-189:00789] [ 5] [1,0]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x91b19)[0x7f17f0d45b19]
+[1,0]<stderr>:[ip-172-31-6-189:00789] [ 6] [1,0]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(__gxx_personality_v0+0x2a8)[0x7f17f0d46488]
+[1,0]<stderr>:[ip-172-31-6-189:00789] [ 7] /lib/x86_64-linux-gnu/libgcc_s.so.1(+0x10613)[0x7f17f0aac613]
+[1,0]<stderr>:[ip-172-31-6-189:00789] [1,0]<stderr>:[ 8] /lib/x86_64-linux-gnu/libgcc_s.so.1(_Unwind_RaiseException+0x2b1)[0x7f17f0aacb71]
+[1,0]<stderr>:[ip-172-31-6-189:00789] [ 9] [1,0]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(__cxa_throw+0x37)[0x7f17f0d46d17]
+[1,0]<stderr>:[ip-172-31-6-189:00789] [10] [1,0]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x8ea19)[0x7f17f0d42a19]
+[1,0]<stderr>:[ip-172-31-6-189:00789] [11] [1,0]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0xbd8dc)[0x7f17f0d718dc]
+[1,0]<stderr>:[ip-172-31-6-189:00789] [12] [1,0]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZN7horovod6common18HorovodGlobalStateD1Ev+0xaa8)[0x7f17c47176b8]
+[1,0]<stderr>:[ip-172-31-6-189:00789] [13] [1,0]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(+0x43041)[0x7f17f5b39041]
+[1,0]<stderr>:[ip-172-31-6-189:00789] [14] [1,0]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(+0x4313a)[0x7f17f5b3913a]
+[1,0]<stderr>:[ip-172-31-6-189:00789] [15] /opt/amazon/efa/lib/libfabric.so.1(+0x5ebbf)[0x7f16dbd7ebbf]
+[1,0]<stderr>:[ip-172-31-6-189:00789] [1,0]<stderr>:[16] /opt/amazon/efa/lib/libfabric.so.1(+0xf3f2)[0x7f16dbd2f3f2]
+[1,0]<stderr>:[ip-172-31-6-189:00789] [17] /opt/amazon/efa/lib/libfabric.so.1(fi_getinfo+0x45d)[0x7f16dbd2fa9d]
+[1,0]<stderr>:[ip-172-31-6-189:00789] [18] /usr/local/lib/libnccl-net.so(+0x2045)[0x7f16e41cc045]
+[1,0]<stderr>:[ip-172-31-6-189:00789] [1,0]<stderr>:[19] [1,0]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(+0xf1065)[0x7f17c47a2065]
+[1,0]<stderr>:[ip-172-31-6-189:00789] [20] [1,0]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(+0xf1b4f)[0x7f17c47a2b4f]
+[1,0]<stderr>:[ip-172-31-6-189:00789] [21] [1,0]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZN7horovod6common13NCCLAllreduce12InitNCCLCommERKSt6vectorINS0_16TensorTableEntryESaIS3_EERKS2_IiSaIiEE+0x245)[0x7f17c47633a5]
+[1,0]<stderr>:[ip-172-31-6-189:00789] [22] [1,0]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZN7horovod6common13NCCLAllreduce7ExecuteERSt6vectorINS0_16TensorTableEntryESaIS3_EERKNS0_8ResponseE+0x54)[0x7f17c47634d4]
+[1,0]<stderr>:[ip-172-31-6-189:00789] [23] [1,0]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZNK7horovod6common16OperationManager16ExecuteAllreduceERSt6vectorINS0_16TensorTableEntryESaIS3_EERKNS0_8ResponseE+0x71)[0x7f17c472e061]
+[1,0]<stderr>:[ip-172-31-6-189:00789] [24] /usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZNK7horovod6common16OperationManager16ExecuteOperationERSt6vectorINS0_16TensorTableEntryESaIS3_EERKNS0_8ResponseE+0xa1)[0x7f17c472e371]
+[1,0]<stderr>:[ip-172-31-6-189:00789] [25] [1,0]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(+0x5e440)[0x7f17c470f440]
+[1,0]<stderr>:[ip-172-31-6-189:00789] [26] [1,0]<stderr>:/usr/local/lib/python3.6/dist-packages/torch/_C.cpython-36m-x86_64-linux-gnu.so(+0xaecf)[0x7f17f2000ecf]
+[1,0]<stderr>:[ip-172-31-6-189:00789] [27] /lib/x86_64-linux-gnu/libpthread.so.0(+0x76db)[0x7f17f58de6db]
+[1,0]<stderr>:[ip-172-31-6-189:00789] [28] [1,0]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(clone+0x3f)[0x7f17f5c1788f]
+[1,0]<stderr>:[ip-172-31-6-189:00789] *** End of error message ***
+[1,0]<stdout>:ip-172-31-6-189:149:685 [0] NCCL INFO NET/OFI Forcing AWS OFI ndev 4
+[1,0]<stdout>:ip-172-31-6-189:149:685 [0] NCCL INFO NET/OFI Selected Provider is efa
+[1,0]<stdout>:NCCL version 2.4.8+cuda10.0
+[1,4]<stdout>:ip-172-31-6-189:153:691 [4] NCCL INFO Bootstrap : Using [0]ens5:172.31.6.189<0>
+[1,1]<stdout>:ip-172-31-6-189:150:686 [1] NCCL INFO Bootstrap : Using [0]ens5:172.31.6.189<0>
+[1,7]<stdout>:ip-172-31-6-189:156:690 [7] NCCL INFO Bootstrap : Using [0]ens5:172.31.6.189<0>
+[1,6]<stdout>:ip-172-31-6-189:155:688 [6] NCCL INFO Bootstrap : Using [0]ens5:172.31.6.189<0>
+[1,3]<stdout>:ip-172-31-6-189:152:687 [3] NCCL INFO Bootstrap : Using [0]ens5:172.31.6.189<0>
+[1,5]<stdout>:ip-172-31-6-189:154:689 [5] NCCL INFO Bootstrap : Using [0]ens5:172.31.6.189<0>
+[1,2]<stdout>:ip-172-31-6-189:151:692 [2] NCCL INFO Bootstrap : Using [0]ens5:172.31.6.189<0>
+[1,11]<stdout>:ip-172-31-3-127:39:580 [3] NCCL INFO Bootstrap : Using [0]ens5:172.31.3.127<0>
+[1,13]<stdout>:ip-172-31-3-127:41:581 [5] NCCL INFO Bootstrap : Using [0]ens5:172.31.3.127<0>
+[1,14]<stdout>:ip-172-31-3-127:42:575 [6] NCCL INFO Bootstrap : Using [0]ens5:172.31.3.127<0>
+[1,15]<stdout>:ip-172-31-3-127:43:574 [7] NCCL INFO Bootstrap : Using [0]ens5:172.31.3.127<0>
+[1,8]<stdout>:ip-172-31-3-127:36:572 [0] NCCL INFO Bootstrap : Using [0]ens5:172.31.3.127<0>
+[1,12]<stdout>:ip-172-31-3-127:40:578 [4] NCCL INFO Bootstrap : Using [0]ens5:172.31.3.127<0>
+[1,10]<stdout>:ip-172-31-3-127:38:579 [2] NCCL INFO Bootstrap : Using [0]ens5:172.31.3.127<0>
+[1,9]<stdout>:ip-172-31-3-127:37:573 [1] NCCL INFO Bootstrap : Using [0]ens5:172.31.3.127<0>
+[1,2]<stderr>:terminate called after throwing an instance of 'std::system_error'
+[1,2]<stderr>:  what():  Resource deadlock avoided
+[1,2]<stderr>:[ip-172-31-6-189:00791] *** Process received signal ***
+[1,2]<stderr>:[ip-172-31-6-189:00791] Signal: Aborted (6)
+[1,2]<stderr>:[ip-172-31-6-189:00791] Signal code:  (-6)
+[1,2]<stderr>:[ip-172-31-6-189:00791] [ 0] [1,2]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(+0x3ef20)[0x7f8b6c1e4f20]
+[1,2]<stderr>:[ip-172-31-6-189:00791] [ 1] [1,2]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(gsignal+0xc7)[0x7f8b6c1e4e97]
+[1,2]<stderr>:[ip-172-31-6-189:00791] [ 2] [1,2]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(abort+0x141)[0x7f8b6c1e6801]
+[1,2]<stderr>:[ip-172-31-6-189:00791] [ 3] [1,2]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x8c957)[0x7f8b673f0957]
+[1,2]<stderr>:[ip-172-31-6-189:00791] [ 4] [1,2]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x92ab6)[0x7f8b673f6ab6]
+[1,2]<stderr>:[ip-172-31-6-189:00791] [ 5] [1,2]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x91b19)[0x7f8b673f5b19]
+[1,2]<stderr>:[ip-172-31-6-189:00791] [ 6] [1,2]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(__gxx_personality_v0+0x2a8)[0x7f8b673f6488]
+[1,2]<stderr>:[ip-172-31-6-189:00791] [ 7] /lib/x86_64-linux-gnu/libgcc_s.so.1(+0x10613)[0x7f8b6715c613]
+[1,2]<stderr>:[ip-172-31-6-189:00791] [ 8] [1,2]<stderr>:/lib/x86_64-linux-gnu/libgcc_s.so.1(_Unwind_RaiseException+0x2b1)[0x7f8b6715cb71]
+[1,2]<stderr>:[ip-172-31-6-189:00791] [ 9] [1,5]<stderr>:terminate called after throwing an instance of 'std::system_error'
+[1,5]<stderr>:  what():  Resource deadlock avoided
+[1,5]<stderr>:[ip-172-31-6-189:00792] *** Process received signal ***
+[1,5]<stderr>:[ip-172-31-6-189:00792] Signal: Aborted (6)
+[1,5]<stderr>:[ip-172-31-6-189:00792] Signal code:  (-6)
+[1,2]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(__cxa_throw+0x37)[0x7f8b673f6d17]
+[1,2]<stderr>:[ip-172-31-6-189:00791] [10] /usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x8ea19)[0x7f8b673f2a19]
+[1,2]<stderr>:[ip-172-31-6-189:00791] [11] /usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0xbd8dc)[0x7f8b674218dc]
+[1,2]<stderr>:[ip-172-31-6-189:00791] [12] /usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZN7horovod6common18HorovodGlobalStateD1Ev+0xaa8)[0x7f8a7488e6b8]
+[1,2]<stderr>:[ip-172-31-6-189:00791] [13] /lib/x86_64-linux-gnu/libc.so.6(+0x43041)[0x7f8b6c1e9041]
+[1,2]<stderr>:[ip-172-31-6-189:00791] [14] [1,7]<stderr>:terminate called after throwing an instance of 'std::system_error'
+[1,2]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(+0x4313a)[0x7f8b6c1e913a]
+[1,2]<stderr>:[ip-172-31-6-189:00791] [15] /opt/amazon/efa/lib/libfabric.so.1(+0x5ebbf)[0x7f8a7057fbbf]
+[1,2]<stderr>:[ip-172-31-6-189:00791] [16] /opt/amazon/efa/lib/libfabric.so.1(+0xf3f2)[0x7f8a705303f2]
+[1,2]<stderr>:[ip-172-31-6-189:00791] [17] /opt/amazon/efa/lib/libfabric.so.1(fi_getinfo+0x45d)[0x7f8a70530a9d]
+[1,2]<stderr>:[ip-172-31-6-189:00791] [18] /usr/local/lib/libnccl-net.so(+0x2045)[0x7f8b391ca045]
+[1,2]<stderr>:[ip-172-31-6-189:00791] [19] /usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(+0xf1065)[0x7f8a74919065]
+[1,2]<stderr>:[ip-172-31-6-189:00791] [1,3]<stderr>:terminate called after throwing an instance of 'std::system_error'
+[1,3]<stderr>:  what():  Resource deadlock avoided
+[1,7]<stderr>:  what():  Resource deadlock avoided
+[1,2]<stderr>:[20] /usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(+0xf492f)[0x7f8a7491c92f]
+[1,2]<stderr>:[ip-172-31-6-189:00791] [21] [1,7]<stderr>:[ip-172-31-6-189:00793] *** Process received signal ***
+[1,7]<stderr>:[ip-172-31-6-189:00793] Signal: Aborted (6)
+[1,7]<stderr>:[ip-172-31-6-189:00793] Signal code:  (-6)
+[1,3]<stderr>:[ip-172-31-6-189:00794] *** Process received signal ***
+[1,3]<stderr>:[ip-172-31-6-189:00794] Signal: Aborted (6)
+[1,3]<stderr>:[ip-172-31-6-189:00794] Signal code:  (-6)
+[1,2]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZN7horovod6common13NCCLAllreduce12InitNCCLCommERKSt6vectorINS0_16TensorTableEntryESaIS3_EERKS2_IiSaIiEE+0x1b3)[0x7f8a748da313]
+[1,2]<stderr>:[ip-172-31-6-189:00791] [22] [1,2]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZN7horovod6common13NCCLAllreduce7ExecuteERSt6vectorINS0_16TensorTableEntryESaIS3_EERKNS0_8ResponseE+0x54)[0x7f8a748da4d4]
+[1,2]<stderr>:[ip-172-31-6-189:00791] [23] [1,2]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZNK7horovod6common16OperationManager16ExecuteAllreduceERSt6vectorINS0_16TensorTableEntryESaIS3_EERKNS0_8ResponseE+0x71)[0x7f8a748a5061]
+[1,2]<stderr>:[ip-172-31-6-189:00791] [24] [1,2]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZNK7horovod6common16OperationManager16ExecuteOperationERSt6vectorINS0_16TensorTableEntryESaIS3_EERKNS0_8ResponseE+0xa1)[0x7f8a748a5371]
+[1,2]<stderr>:[ip-172-31-6-189:00791] [25] [1,2]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(+0x5e440)[0x7f8a74886440]
+[1,2]<stderr>:[ip-172-31-6-189:00791] [26] /usr/local/lib/python3.6/dist-packages/torch/_C.cpython-36m-x86_64-linux-gnu.so(+0xaecf)[0x7f8b686b0ecf]
+[1,2]<stderr>:[ip-172-31-6-189:00791] [27] /lib/x86_64-linux-gnu/libpthread.so.0(+0x76db)[0x7f8b6bf8e6db]
+[1,2]<stderr>:[ip-172-31-6-189:00791] [28] [1,2]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(clone+0x3f)[0x7f8b6c2c788f]
+[1,2]<stderr>:[ip-172-31-6-189:00791] *** End of error message ***
+[1,5]<stderr>:[ip-172-31-6-189:00792] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x3ef20)[0x7f89cf68ff20]
+[1,5]<stderr>:[ip-172-31-6-189:00792] [ 1] [1,5]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(gsignal+0xc7)[0x7f89cf68fe97]
+[1,5]<stderr>:[ip-172-31-6-189:00792] [ 2] [1,5]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(abort+0x141)[0x7f89cf691801]
+[1,5]<stderr>:[ip-172-31-6-189:00792] [ 3] [1,5]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x8c957)[0x7f89ca89b957]
+[1,5]<stderr>:[ip-172-31-6-189:00792] [ 4] [1,7]<stderr>:[ip-172-31-6-189:00793] [ 0] [1,3]<stderr>:[ip-172-31-6-189:00794] [ 0] [1,7]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(+0x3ef20)[0x7fc4244faf20]
+[1,7]<stderr>:[ip-172-31-6-189:00793] [ 1] [1,3]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(+0x3ef20)[0x7fbd4132df20]
+[1,3]<stderr>:[ip-172-31-6-189:00794] [ 1] [1,5]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x92ab6)[0x7f89ca8a1ab6]
+[1,5]<stderr>:[ip-172-31-6-189:00792] [ 5] [1,7]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(gsignal+0xc7)[0x7fc4244fae97]
+[1,7]<stderr>:[ip-172-31-6-189:00793] [ 2] [1,3]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(gsignal+0xc7)[0x7fbd4132de97]
+[1,3]<stderr>:[ip-172-31-6-189:00794] [ 2] [1,7]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(abort+0x141)[0x7fc4244fc801]
+[1,7]<stderr>:[ip-172-31-6-189:00793] [ 3] [1,5]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x91b19)[0x7f89ca8a0b19]
+[1,5]<stderr>:[ip-172-31-6-189:00792] [ 6] [1,3]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(abort+0x141)[0x7fbd4132f801]
+[1,3]<stderr>:[ip-172-31-6-189:00794] [ 3] [1,7]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x8c957)[0x7fc41f706957]
+[1,7]<stderr>:[ip-172-31-6-189:00793] [ 4] [1,5]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(__gxx_personality_v0+0x2a8)[0x7f89ca8a1488]
+[1,5]<stderr>:[ip-172-31-6-189:00792] [ 7] /lib/x86_64-linux-gnu/libgcc_s.so.1(+0x10613)[0x7f89ca607613]
+[1,5]<stderr>:[ip-172-31-6-189:00792] [ 8] /lib/x86_64-linux-gnu/libgcc_s.so.1(_Unwind_RaiseException+0x2b1)[0x7f89ca607b71]
+[1,5]<stderr>:[ip-172-31-6-189:00792] [ 9] [1,3]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x8c957)[0x7fbd3c539957]
+[1,3]<stderr>:[ip-172-31-6-189:00794] [ 4] [1,7]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x92ab6)[0x7fc41f70cab6]
+[1,7]<stderr>:[ip-172-31-6-189:00793] [ 5] [1,3]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x92ab6)[0x7fbd3c53fab6]
+[1,3]<stderr>:[ip-172-31-6-189:00794] [ 5] [1,5]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(__cxa_throw+0x37)[0x7f89ca8a1d17]
+[1,5]<stderr>:[ip-172-31-6-189:00792] [10] [1,3]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x91b19)[0x7fbd3c53eb19]
+[1,3]<stderr>:[ip-172-31-6-189:00794] [ 6] [1,7]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x91b19)[0x7fc41f70bb19]
+[1,7]<stderr>:[ip-172-31-6-189:00793] [ 6] [1,5]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x8ea19)[0x7f89ca89da19]
+[1,5]<stderr>:[ip-172-31-6-189:00792] [11] [1,7]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(__gxx_personality_v0+0x2a8)[0x7fc41f70c488]
+[1,7]<stderr>:[ip-172-31-6-189:00793] [ 7] /lib/x86_64-linux-gnu/libgcc_s.so.1(+0x10613)[0x7fc41f472613]
+[1,7]<stderr>:[ip-172-31-6-189:00793] [1,3]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(__gxx_personality_v0+0x2a8)[0x7fbd3c53f488]
+[1,3]<stderr>:[ip-172-31-6-189:00794] [ 7] /lib/x86_64-linux-gnu/libgcc_s.so.1(+0x10613)[0x7fbd3c2a5613]
+[1,3]<stderr>:[ip-172-31-6-189:00794] [ 8] [1,5]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0xbd8dc)[0x7f89ca8cc8dc]
+[1,5]<stderr>:[ip-172-31-6-189:00792] [12] [1,7]<stderr>:[ 8] /lib/x86_64-linux-gnu/libgcc_s.so.1(_Unwind_RaiseException+0x2b1)[0x7fc41f472b71]
+[1,7]<stderr>:[ip-172-31-6-189:00793] [ 9] [1,3]<stderr>:/lib/x86_64-linux-gnu/libgcc_s.so.1(_Unwind_RaiseException+0x2b1)[0x7fbd3c2a5b71]
+[1,3]<stderr>:[ip-172-31-6-189:00794] [ 9] [1,5]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZN7horovod6common18HorovodGlobalStateD1Ev+0xaa8)[0x7f88d7d396b8]
+[1,5]<stderr>:[ip-172-31-6-189:00792] [13] [1,3]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(__cxa_throw+0x37)[0x7fbd3c53fd17]
+[1,3]<stderr>:[ip-172-31-6-189:00794] [10] [1,7]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(__cxa_throw+0x37)[0x7fc41f70cd17]
+[1,7]<stderr>:[ip-172-31-6-189:00793] [10] [1,5]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(+0x43041)[0x7f89cf694041]
+[1,5]<stderr>:[ip-172-31-6-189:00792] [14] [1,5]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(+0x4313a)[0x7f89cf69413a]
+[1,5]<stderr>:[ip-172-31-6-189:00792] [15] /opt/amazon/efa/lib/libfabric.so.1(+0x5ebbf)[0x7f897f69fbbf]
+[1,5]<stderr>:[ip-172-31-6-189:00792] [1,3]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x8ea19)[0x7fbd3c53ba19]
+[1,3]<stderr>:[ip-172-31-6-189:00794] [11] [1,7]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x8ea19)[0x7fc41f708a19]
+[1,7]<stderr>:[ip-172-31-6-189:00793] [11] [1,5]<stderr>:[16] /opt/amazon/efa/lib/libfabric.so.1(+0xf3f2)[0x7f897f6503f2]
+[1,5]<stderr>:[ip-172-31-6-189:00792] [17] /opt/amazon/efa/lib/libfabric.so.1(fi_getinfo+0x45d)[0x7f897f650a9d]
+[1,5]<stderr>:[ip-172-31-6-189:00792] [18] /usr/local/lib/libnccl-net.so(+0x2045)[0x7f897f91f045]
+[1,5]<stderr>:[ip-172-31-6-189:00792] [19] [1,5]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(+0xf1065)[0x7f88d7dc4065]
+[1,5]<stderr>:[ip-172-31-6-189:00792] [20] [1,5]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(+0xf492f)[0x7f88d7dc792f]
+[1,5]<stderr>:[ip-172-31-6-189:00792] [21] [1,7]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0xbd8dc)[0x7fc41f7378dc]
+[1,7]<stderr>:[ip-172-31-6-189:00793] [12] [1,3]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0xbd8dc)[0x7fbd3c56a8dc]
+[1,3]<stderr>:[ip-172-31-6-189:00794] [12] [1,5]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZN7horovod6common13NCCLAllreduce12InitNCCLCommERKSt6vectorINS0_16TensorTableEntryESaIS3_EERKS2_IiSaIiEE+0x1b3)[0x7f88d7d85313]
+[1,5]<stderr>:[ip-172-31-6-189:00792] [22] [1,3]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZN7horovod6common18HorovodGlobalStateD1Ev+0xaa8)[0x7fbd2e6f46b8]
+[1,3]<stderr>:[ip-172-31-6-189:00794] [13] [1,7]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZN7horovod6common18HorovodGlobalStateD1Ev+0xaa8)[0x7fc4118c16b8]
+[1,7]<stderr>:[ip-172-31-6-189:00793] [13] [1,5]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZN7horovod6common13NCCLAllreduce7ExecuteERSt6vectorINS0_16TensorTableEntryESaIS3_EERKNS0_8ResponseE+0x54)[0x7f88d7d854d4]
+[1,5]<stderr>:[ip-172-31-6-189:00792] [23] [1,7]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(+0x43041)[0x7fc4244ff041]
+[1,7]<stderr>:[ip-172-31-6-189:00793] [14] [1,3]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(+0x43041)[0x7fbd41332041]
+[1,3]<stderr>:[ip-172-31-6-189:00794] [14] [1,5]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZNK7horovod6common16OperationManager16ExecuteAllreduceERSt6vectorINS0_16TensorTableEntryESaIS3_EERKNS0_8ResponseE+0x71)[0x7f88d7d50061]
+[1,5]<stderr>:[ip-172-31-6-189:00792] [24] [1,3]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(+0x4313a)[0x7fbd4133213a]
+[1,3]<stderr>:[ip-172-31-6-189:00794] [15] [1,7]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(+0x4313a)[0x7fc4244ff13a]
+[1,7]<stderr>:[ip-172-31-6-189:00793] [15] /opt/amazon/efa/lib/libfabric.so.1(+0x5ebbf)[0x7fc330166bbf]
+[1,7]<stderr>:[ip-172-31-6-189:00793] [16] [1,5]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZNK7horovod6common16OperationManager16ExecuteOperationERSt6vectorINS0_16TensorTableEntryESaIS3_EERKNS0_8ResponseE+0xa1)[0x7f88d7d50371]
+[1,5]<stderr>:[ip-172-31-6-189:00792] [25] [1,7]<stderr>:/opt/amazon/efa/lib/libfabric.so.1(+0xf3f2)[0x7fc3301173f2]
+[1,7]<stderr>:[ip-172-31-6-189:00793] [17] /opt/amazon/efa/lib/libfabric.so.1(fi_getinfo+0x45d)[0x7fc330117a9d]
+[1,7]<stderr>:[ip-172-31-6-189:00793] [18] /usr/local/lib/libnccl-net.so(+0x2045)[0x7fc3303e6045]
+[1,7]<stderr>:[ip-172-31-6-189:00793] [19] [1,3]<stderr>:/opt/amazon/efa/lib/libfabric.so.1(+0x5ebbf)[0x7fbc24519bbf]
+[1,3]<stderr>:[ip-172-31-6-189:00794] [16] /opt/amazon/efa/lib/libfabric.so.1(+0xf3f2)[0x7fbc244ca3f2]
+[1,3]<stderr>:[ip-172-31-6-189:00794] [17] /opt/amazon/efa/lib/libfabric.so.1(fi_getinfo+0x45d)[0x7fbc244caa9d]
+[1,3]<stderr>:[ip-172-31-6-189:00794] [18] /usr/local/lib/libnccl-net.so(+0x2045)[0x7fbc24799045]
+[1,3]<stderr>:[ip-172-31-6-189:00794] [19] [1,5]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(+0x5e440)[0x7f88d7d31440]
+[1,5]<stderr>:[ip-172-31-6-189:00792] [26] /usr/local/lib/python3.6/dist-packages/torch/_C.cpython-36m-x86_64-linux-gnu.so(+0xaecf)[0x7f89cbb5becf]
+[1,5]<stderr>:[ip-172-31-6-189:00792] [27] /lib/x86_64-linux-gnu/libpthread.so.0(+0x76db)[0x7f89cf4396db]
+[1,5]<stderr>:[ip-172-31-6-189:00792] [28] [1,3]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(+0xf1065)[0x7fbd2e77f065]
+[1,3]<stderr>:[ip-172-31-6-189:00794] [20] [1,7]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(+0xf1065)[0x7fc41194c065]
+[1,7]<stderr>:[ip-172-31-6-189:00793] [20] [1,3]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(+0xf492f)[0x7fbd2e78292f]
+[1,3]<stderr>:[ip-172-31-6-189:00794] [21] [1,7]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(+0xf492f)[0x7fc41194f92f]
+[1,7]<stderr>:[ip-172-31-6-189:00793] [21] [1,5]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(clone+0x3f)[0x7f89cf77288f]
+[1,5]<stderr>:[ip-172-31-6-189:00792] *** End of error message ***
+[1,3]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZN7horovod6common13NCCLAllreduce12InitNCCLCommERKSt6vectorINS0_16TensorTableEntryESaIS3_EERKS2_IiSaIiEE+0x1b3)[0x7fbd2e740313]
+[1,3]<stderr>:[ip-172-31-6-189:00794] [22] [1,7]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZN7horovod6common13NCCLAllreduce12InitNCCLCommERKSt6vectorINS0_16TensorTableEntryESaIS3_EERKS2_IiSaIiEE+0x1b3)[0x7fc41190d313]
+[1,7]<stderr>:[ip-172-31-6-189:00793] [22] [1,3]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZN7horovod6common13NCCLAllreduce7ExecuteERSt6vectorINS0_16TensorTableEntryESaIS3_EERKNS0_8ResponseE+0x54)[0x7fbd2e7404d4]
+[1,3]<stderr>:[ip-172-31-6-189:00794] [23] [1,7]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZN7horovod6common13NCCLAllreduce7ExecuteERSt6vectorINS0_16TensorTableEntryESaIS3_EERKNS0_8ResponseE+0x54)[0x7fc41190d4d4]
+[1,7]<stderr>:[ip-172-31-6-189:00793] [23] [1,3]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZNK7horovod6common16OperationManager16ExecuteAllreduceERSt6vectorINS0_16TensorTableEntryESaIS3_EERKNS0_8ResponseE+0x71)[0x7fbd2e70b061]
+[1,3]<stderr>:[ip-172-31-6-189:00794] [24] [1,7]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZNK7horovod6common16OperationManager16ExecuteAllreduceERSt6vectorINS0_16TensorTableEntryESaIS3_EERKNS0_8ResponseE+0x71)[0x7fc4118d8061]
+[1,7]<stderr>:[ip-172-31-6-189:00793] [24] [1,3]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZNK7horovod6common16OperationManager16ExecuteOperationERSt6vectorINS0_16TensorTableEntryESaIS3_EERKNS0_8ResponseE+0xa1)[0x7fbd2e70b371]
+[1,3]<stderr>:[ip-172-31-6-189:00794] [25] [1,7]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZNK7horovod6common16OperationManager16ExecuteOperationERSt6vectorINS0_16TensorTableEntryESaIS3_EERKNS0_8ResponseE+0xa1)[0x7fc4118d8371]
+[1,7]<stderr>:[ip-172-31-6-189:00793] [25] [1,7]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(+0x5e440)[0x7fc4118b9440]
+[1,7]<stderr>:[ip-172-31-6-189:00793] [26] /usr/local/lib/python3.6/dist-packages/torch/_C.cpython-36m-x86_64-linux-gnu.so(+0xaecf)[0x7fc4209c6ecf]
+[1,3]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(+0x5e440)[0x7fbd2e6ec440]
+[1,3]<stderr>:[ip-172-31-6-189:00794] [26] /usr/local/lib/python3.6/dist-packages/torch/_C.cpython-36m-x86_64-linux-gnu.so(+0xaecf)[0x7fbd3d7f9ecf]
+[1,3]<stderr>:[ip-172-31-6-189:00794] [27] /lib/x86_64-linux-gnu/libpthread.so.0(+0x76db)[0x7fbd410d76db]
+[1,3]<stderr>:[ip-172-31-6-189:00794] [1,7]<stderr>:[ip-172-31-6-189:00793] [27] /lib/x86_64-linux-gnu/libpthread.so.0(+0x76db)[0x7fc4242a46db]
+[1,7]<stderr>:[ip-172-31-6-189:00793] [28] [1,3]<stderr>:[28] [1,7]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(clone+0x3f)[0x7fc4245dd88f]
+[1,7]<stderr>:[ip-172-31-6-189:00793] *** End of error message ***
+[1,3]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(clone+0x3f)[0x7fbd4141088f]
+[1,3]<stderr>:[ip-172-31-6-189:00794] *** End of error message ***
+[1,15]<stderr>:terminate called after throwing an instance of 'std::system_error'
+[1,15]<stderr>:  what():  Resource deadlock avoided
+[1,15]<stderr>:[ip-172-31-3-127:00676] *** Process received signal ***
+[1,15]<stderr>:[ip-172-31-3-127:00676] Signal: Aborted (6)
+[1,15]<stderr>:[ip-172-31-3-127:00676] Signal code:  (-6)
+[1,15]<stderr>:[ip-172-31-3-127:00676] [ 0] [1,15]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(+0x3ef20)[0x7f5acc532f20]
+[1,15]<stderr>:[ip-172-31-3-127:00676] [ 1] [1,15]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(gsignal+0xc7)[0x7f5acc532e97]
+[1,15]<stderr>:[ip-172-31-3-127:00676] [ 2] [1,15]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(abort+0x141)[0x7f5acc534801]
+[1,15]<stderr>:[ip-172-31-3-127:00676] [ 3] [1,15]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x8c957)[0x7f5ac773e957]
+[1,15]<stderr>:[ip-172-31-3-127:00676] [ 4] [1,15]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x92ab6)[0x7f5ac7744ab6]
+[1,15]<stderr>:[ip-172-31-3-127:00676] [ 5] [1,11]<stderr>:terminate called after throwing an instance of 'std::system_error'
+[1,15]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x91b19)[0x7f5ac7743b19]
+[1,15]<stderr>:[ip-172-31-3-127:00676] [ 6] [1,11]<stderr>:  what():  Resource deadlock avoided
+[1,15]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(__gxx_personality_v0+0x2a8)[0x7f5ac7744488]
+[1,15]<stderr>:[ip-172-31-3-127:00676] [ 7] /lib/x86_64-linux-gnu/libgcc_s.so.1(+0x10613)[0x7f5ac74aa613]
+[1,15]<stderr>:[ip-172-31-3-127:00676] [ 8] /lib/x86_64-linux-gnu/libgcc_s.so.1(_Unwind_RaiseException+0x2b1)[0x7f5ac74aab71]
+[1,11]<stderr>:[ip-172-31-3-127:00677] *** Process received signal ***
+[1,11]<stderr>:[ip-172-31-3-127:00677] Signal: Aborted (6)
+[1,11]<stderr>:[ip-172-31-3-127:00677] Signal code:  (-6)
+[1,15]<stderr>:[ip-172-31-3-127:00676] [ 9] [1,15]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(__cxa_throw+0x37)[0x7f5ac7744d17]
+[1,15]<stderr>:[ip-172-31-3-127:00676] [10] [1,15]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x8ea19)[0x7f5ac7740a19]
+[1,15]<stderr>:[ip-172-31-3-127:00676] [11] [1,15]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0xbd8dc)[0x7f5ac776f8dc]
+[1,15]<stderr>:[ip-172-31-3-127:00676] [12] [1,15]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZN7horovod6common18HorovodGlobalStateD1Ev+0xaa8)[0x7f5ab98f96b8]
+[1,15]<stderr>:[ip-172-31-3-127:00676] [13] [1,15]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(+0x43041)[0x7f5acc537041]
+[1,15]<stderr>:[ip-172-31-3-127:00676] [14] [1,15]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(+0x4313a)[0x7f5acc53713a]
+[1,15]<stderr>:[ip-172-31-3-127:00676] [15] /opt/amazon/efa/lib/libfabric.so.1(+0x5ebbf)[0x7f59bc378bbf]
+[1,15]<stderr>:[ip-172-31-3-127:00676] [16] [1,15]<stderr>:/opt/amazon/efa/lib/libfabric.so.1(+0xf3f2)[0x7f59bc3293f2]
+[1,15]<stderr>:[ip-172-31-3-127:00676] [17] /opt/amazon/efa/lib/libfabric.so.1(fi_getinfo+0x45d)[0x7f59bc329a9d]
+[1,15]<stderr>:[ip-172-31-3-127:00676] [18] /usr/local/lib/libnccl-net.so(+0x2045)[0x7f59bc5f8045]
+[1,15]<stderr>:[ip-172-31-3-127:00676] [19] [1,15]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(+0xf1065)[0x7f5ab9984065]
+[1,15]<stderr>:[ip-172-31-3-127:00676] [20] [1,15]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(+0xf492f)[0x7f5ab998792f]
+[1,15]<stderr>:[ip-172-31-3-127:00676] [21] [1,15]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZN7horovod6common13NCCLAllreduce12InitNCCLCommERKSt6vectorINS0_16TensorTableEntryESaIS3_EERKS2_IiSaIiEE+0x1b3)[0x7f5ab9945313]
+[1,15]<stderr>:[ip-172-31-3-127:00676] [22] /usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZN7horovod6common13NCCLAllreduce7ExecuteERSt6vectorINS0_16TensorTableEntryESaIS3_EERKNS0_8ResponseE+0x54)[0x7f5ab99454d4]
+[1,15]<stderr>:[ip-172-31-3-127:00676] [23] [1,15]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZNK7horovod6common16OperationManager16ExecuteAllreduceERSt6vectorINS0_16TensorTableEntryESaIS3_EERKNS0_8ResponseE+0x71)[0x7f5ab9910061]
+[1,15]<stderr>:[ip-172-31-3-127:00676] [24] [1,15]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZNK7horovod6common16OperationManager16ExecuteOperationERSt6vectorINS0_16TensorTableEntryESaIS3_EERKNS0_8ResponseE+0xa1)[0x7f5ab9910371]
+[1,15]<stderr>:[ip-172-31-3-127:00676] [25] /usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(+0x5e440)[0x7f5ab98f1440]
+[1,15]<stderr>:[ip-172-31-3-127:00676] [26] [1,15]<stderr>:/usr/local/lib/python3.6/dist-packages/torch/_C.cpython-36m-x86_64-linux-gnu.so(+0xaecf)[0x7f5ac89feecf]
+[1,15]<stderr>:[ip-172-31-3-127:00676] [27] /lib/x86_64-linux-gnu/libpthread.so.0(+0x76db)[0x7f5acc2dc6db]
+[1,15]<stderr>:[ip-172-31-3-127:00676] [28] [1,15]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(clone+0x3f)[0x7f5acc61588f]
+[1,15]<stderr>:[ip-172-31-3-127:00676] *** End of error message ***
+[1,6]<stderr>:terminate called after throwing an instance of 'std::system_error'
+[1,6]<stderr>:  what():  Resource deadlock avoided
+[1,11]<stderr>:[ip-172-31-3-127:00677] [ 0] [1,11]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(+0x3ef20)[0x7fd2d5265f20]
+[1,11]<stderr>:[ip-172-31-3-127:00677] [ 1] [1,6]<stderr>:[ip-172-31-6-189:00795] *** Process received signal ***
+[1,6]<stderr>:[ip-172-31-6-189:00795] Signal: Aborted (6)
+[1,6]<stderr>:[ip-172-31-6-189:00795] Signal code:  (-6)
+[1,11]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(gsignal+0xc7)[0x7fd2d5265e97]
+[1,11]<stderr>:[ip-172-31-3-127:00677] [ 2] [1,11]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(abort+0x141)[0x7fd2d5267801]
+[1,11]<stderr>:[ip-172-31-3-127:00677] [ 3] [1,11]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x8c957)[0x7fd2d0471957]
+[1,11]<stderr>:[ip-172-31-3-127:00677] [ 4] [1,11]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x92ab6)[0x7fd2d0477ab6]
+[1,11]<stderr>:[ip-172-31-3-127:00677] [ 5] [1,11]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x91b19)[0x7fd2d0476b19]
+[1,11]<stderr>:[ip-172-31-3-127:00677] [ 6] [1,11]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(__gxx_personality_v0+0x2a8)[0x7fd2d0477488]
+[1,11]<stderr>:[ip-172-31-3-127:00677] [ 7] [1,11]<stderr>:/lib/x86_64-linux-gnu/libgcc_s.so.1(+0x10613)[0x7fd2d01dd613]
+[1,11]<stderr>:[ip-172-31-3-127:00677] [ 8] /lib/x86_64-linux-gnu/libgcc_s.so.1(_Unwind_RaiseException+0x2b1)[0x7fd2d01ddb71]
+[1,11]<stderr>:[ip-172-31-3-127:00677] [ 9] [1,11]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(__cxa_throw+0x37)[0x7fd2d0477d17]
+[1,11]<stderr>:[ip-172-31-3-127:00677] [10] [1,11]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x8ea19)[0x7fd2d0473a19]
+[1,11]<stderr>:[ip-172-31-3-127:00677] [11] [1,6]<stderr>:[ip-172-31-6-189:00795] [ 0] [1,11]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0xbd8dc)[0x7fd2d04a28dc]
+[1,11]<stderr>:[ip-172-31-3-127:00677] [12] [1,6]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(+0x3ef20)[0x7f898f3b4f20]
+[1,6]<stderr>:[ip-172-31-6-189:00795] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0xc7)[0x7f898f3b4e97]
+[1,11]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZN7horovod6common18HorovodGlobalStateD1Ev+0xaa8)[0x7fd1dd90f6b8]
+[1,11]<stderr>:[ip-172-31-3-127:00677] [13] [1,6]<stderr>:[ip-172-31-6-189:00795] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x141)[0x7f898f3b6801]
+[1,11]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(+0x43041)[0x7fd2d526a041]
+[1,11]<stderr>:[ip-172-31-3-127:00677] [14] [1,6]<stderr>:[ip-172-31-6-189:00795] [ 3] [1,11]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(+0x4313a)[0x7fd2d526a13a]
+[1,11]<stderr>:[ip-172-31-3-127:00677] [15] /opt/amazon/efa/lib/libfabric.so.1(+0x5ebbf)[0x7fd29569abbf]
+[1,11]<stderr>:[ip-172-31-3-127:00677] [16] /opt/amazon/efa/lib/libfabric.so.1(+0xf3f2)[0x7fd29564b3f2]
+[1,11]<stderr>:[ip-172-31-3-127:00677] [1,6]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x8c957)[0x7f898a5c0957]
+[1,6]<stderr>:[ip-172-31-6-189:00795] [ 4] [1,11]<stderr>:[17] /opt/amazon/efa/lib/libfabric.so.1(fi_getinfo+0x45d)[0x7fd29564ba9d]
+[1,11]<stderr>:[ip-172-31-3-127:00677] [18] /usr/local/lib/libnccl-net.so(+0x2045)[0x7fd2aa31c045]
+[1,11]<stderr>:[ip-172-31-3-127:00677] [19] [1,11]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(+0xf1065)[0x7fd1dd99a065]
+[1,11]<stderr>:[ip-172-31-3-127:00677] [20] [1,8]<stderr>:terminate called after throwing an instance of 'std::system_error'
+[1,6]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x92ab6)[0x7f898a5c6ab6]
+[1,6]<stderr>:[ip-172-31-6-189:00795] [ 5] [1,11]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(+0xf492f)[0x7fd1dd99d92f]
+[1,11]<stderr>:[ip-172-31-3-127:00677] [21] [1,6]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x91b19)[0x7f898a5c5b19]
+[1,6]<stderr>:[ip-172-31-6-189:00795] [ 6] [1,8]<stderr>:  what():  Resource deadlock avoided
+[1,11]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZN7horovod6common13NCCLAllreduce12InitNCCLCommERKSt6vectorINS0_16TensorTableEntryESaIS3_EERKS2_IiSaIiEE+0x1b3)[0x7fd1dd95b313]
+[1,11]<stderr>:[ip-172-31-3-127:00677] [22] /usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZN7horovod6common13NCCLAllreduce7ExecuteERSt6vectorINS0_16TensorTableEntryESaIS3_EERKNS0_8ResponseE+0x54)[0x7fd1dd95b4d4]
+[1,11]<stderr>:[ip-172-31-3-127:00677] [23] [1,6]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(__gxx_personality_v0+0x2a8)[0x7f898a5c6488]
+[1,6]<stderr>:[ip-172-31-6-189:00795] [ 7] /lib/x86_64-linux-gnu/libgcc_s.so.1(+0x10613)[0x7f898a32c613]
+[1,6]<stderr>:[ip-172-31-6-189:00795] [ 8] [1,11]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZNK7horovod6common16OperationManager16ExecuteAllreduceERSt6vectorINS0_16TensorTableEntryESaIS3_EERKNS0_8ResponseE+0x71)[0x7fd1dd926061]
+[1,11]<stderr>:[ip-172-31-3-127:00677] [24] /usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZNK7horovod6common16OperationManager16ExecuteOperationERSt6vectorINS0_16TensorTableEntryESaIS3_EERKNS0_8ResponseE+0xa1)[0x7fd1dd926371]
+[1,11]<stderr>:[ip-172-31-3-127:00677] [25] [1,6]<stderr>:/lib/x86_64-linux-gnu/libgcc_s.so.1(_Unwind_RaiseException+0x2b1)[0x7f898a32cb71]
+[1,6]<stderr>:[ip-172-31-6-189:00795] [ 9] [1,8]<stderr>:[ip-172-31-3-127:00678] *** Process received signal ***
+[1,8]<stderr>:[ip-172-31-3-127:00678] Signal: Aborted (6)
+[1,8]<stderr>:[ip-172-31-3-127:00678] Signal code:  (-6)
+[1,11]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(+0x5e440)[0x7fd1dd907440]
+[1,11]<stderr>:[ip-172-31-3-127:00677] [26] /usr/local/lib/python3.6/dist-packages/torch/_C.cpython-36m-x86_64-linux-gnu.so(+0xaecf)[0x7fd2d1731ecf]
+[1,11]<stderr>:[ip-172-31-3-127:00677] [27] /lib/x86_64-linux-gnu/libpthread.so.0(+0x76db)[0x7fd2d500f6db]
+[1,11]<stderr>:[ip-172-31-3-127:00677] [28] [1,11]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(clone+0x3f)[0x7fd2d534888f]
+[1,11]<stderr>:[ip-172-31-3-127:00677] *** End of error message ***
+[1,6]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(__cxa_throw+0x37)[0x7f898a5c6d17]
+[1,6]<stderr>:[ip-172-31-6-189:00795] [10] [1,6]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x8ea19)[0x7f898a5c2a19]
+[1,6]<stderr>:[ip-172-31-6-189:00795] [11] [1,6]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0xbd8dc)[0x7f898a5f18dc]
+[1,6]<stderr>:[ip-172-31-6-189:00795] [12] [1,6]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZN7horovod6common18HorovodGlobalStateD1Ev+0xaa8)[0x7f8897a5e6b8]
+[1,6]<stderr>:[ip-172-31-6-189:00795] [13] [1,4]<stderr>:terminate called after throwing an instance of 'std::system_error'
+[1,6]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(+0x43041)[0x7f898f3b9041]
+[1,6]<stderr>:[ip-172-31-6-189:00795] [14] [1,4]<stderr>:  what():  Resource deadlock avoided
+[1,6]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(+0x4313a)[0x7f898f3b913a]
+[1,6]<stderr>:[ip-172-31-6-189:00795] [15] [1,6]<stderr>:/opt/amazon/efa/lib/libfabric.so.1(+0x5ebbf)[0x7f892a3c6bbf]
+[1,6]<stderr>:[ip-172-31-6-189:00795] [16] /opt/amazon/efa/lib/libfabric.so.1(+0xf3f2)[0x7f892a3773f2]
+[1,6]<stderr>:[ip-172-31-6-189:00795] [17] /opt/amazon/efa/lib/libfabric.so.1(fi_getinfo+0x45d)[0x7f892a377a9d]
+[1,6]<stderr>:[ip-172-31-6-189:00795] [18] /usr/local/lib/libnccl-net.so(+0x2045)[0x7f892a646045]
+[1,6]<stderr>:[ip-172-31-6-189:00795] [19] [1,4]<stderr>:[ip-172-31-6-189:00796] *** Process received signal ***
+[1,4]<stderr>:[ip-172-31-6-189:00796] Signal: Aborted (6)
+[1,4]<stderr>:[ip-172-31-6-189:00796] Signal code:  (-6)
+[1,6]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(+0xf1065)[0x7f8897ae9065]
+[1,6]<stderr>:[ip-172-31-6-189:00795] [20] [1,6]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(+0xf492f)[0x7f8897aec92f]
+[1,6]<stderr>:[ip-172-31-6-189:00795] [21] [1,6]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZN7horovod6common13NCCLAllreduce12InitNCCLCommERKSt6vectorINS0_16TensorTableEntryESaIS3_EERKS2_IiSaIiEE+0x1b3)[0x7f8897aaa313]
+[1,6]<stderr>:[ip-172-31-6-189:00795] [22] [1,6]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZN7horovod6common13NCCLAllreduce7ExecuteERSt6vectorINS0_16TensorTableEntryESaIS3_EERKNS0_8ResponseE+0x54)[0x7f8897aaa4d4]
+[1,6]<stderr>:[ip-172-31-6-189:00795] [23] [1,6]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZNK7horovod6common16OperationManager16ExecuteAllreduceERSt6vectorINS0_16TensorTableEntryESaIS3_EERKNS0_8ResponseE+0x71)[0x7f8897a75061]
+[1,6]<stderr>:[ip-172-31-6-189:00795] [24] [1,6]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZNK7horovod6common16OperationManager16ExecuteOperationERSt6vectorINS0_16TensorTableEntryESaIS3_EERKNS0_8ResponseE+0xa1)[0x7f8897a75371]
+[1,6]<stderr>:[ip-172-31-6-189:00795] [25] [1,6]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(+0x5e440)[0x7f8897a56440]
+[1,6]<stderr>:[ip-172-31-6-189:00795] [26] [1,6]<stderr>:/usr/local/lib/python3.6/dist-packages/torch/_C.cpython-36m-x86_64-linux-gnu.so(+0xaecf)[0x7f898b880ecf]
+[1,6]<stderr>:[ip-172-31-6-189:00795] [27] [1,6]<stderr>:/lib/x86_64-linux-gnu/libpthread.so.0(+0x76db)[0x7f898f15e6db]
+[1,6]<stderr>:[ip-172-31-6-189:00795] [28] [1,6]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(clone+0x3f)[0x7f898f49788f]
+[1,6]<stderr>:[ip-172-31-6-189:00795] *** End of error message ***
+[1,8]<stderr>:[ip-172-31-3-127:00678] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x3ef20)[0x7f3ea5de5f20]
+[1,8]<stderr>:[ip-172-31-3-127:00678] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0xc7)[0x7f3ea5de5e97]
+[1,8]<stderr>:[ip-172-31-3-127:00678] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x141)[0x7f3ea5de7801]
+[1,8]<stderr>:[ip-172-31-3-127:00678] [ 3] /usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x8c957)[0x7f3ea0ff1957]
+[1,8]<stderr>:[ip-172-31-3-127:00678] [ 4] [1,8]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x92ab6)[0x7f3ea0ff7ab6]
+[1,8]<stderr>:[ip-172-31-3-127:00678] [ 5] /usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x91b19)[0x7f3ea0ff6b19]
+[1,8]<stderr>:[ip-172-31-3-127:00678] [ 6] [1,1]<stderr>:terminate called after throwing an instance of 'std::system_error'
+[1,1]<stderr>:  what():  Resource deadlock avoided
+[1,8]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(__gxx_personality_v0+0x2a8)[0x7f3ea0ff7488]
+[1,8]<stderr>:[ip-172-31-3-127:00678] [ 7] /lib/x86_64-linux-gnu/libgcc_s.so.1(+0x10613)[0x7f3ea0d5d613]
+[1,8]<stderr>:[ip-172-31-3-127:00678] [ 8] /lib/x86_64-linux-gnu/libgcc_s.so.1(_Unwind_RaiseException+0x2b1)[0x7f3ea0d5db71]
+[1,8]<stderr>:[ip-172-31-3-127:00678] [ 9] [1,14]<stderr>:terminate called after throwing an instance of 'std::system_error'
+[1,14]<stderr>:  what():  Resource deadlock avoided
+[1,1]<stderr>:[ip-172-31-6-189:00797] *** Process received signal ***
+[1,1]<stderr>:[ip-172-31-6-189:00797] Signal: Aborted (6)
+[1,1]<stderr>:[ip-172-31-6-189:00797] Signal code:  (-6)
+[1,8]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(__cxa_throw+0x37)[0x7f3ea0ff7d17]
+[1,8]<stderr>:[ip-172-31-3-127:00678] [10] [1,14]<stderr>:[ip-172-31-3-127:00679] *** Process received signal ***
+[1,14]<stderr>:[ip-172-31-3-127:00679] Signal: Aborted (6)
+[1,14]<stderr>:[ip-172-31-3-127:00679] Signal code:  (-6)
+[1,13]<stderr>:terminate called after throwing an instance of 'std::system_error'
+[1,13]<stderr>:  what():  Resource deadlock avoided
+[1,4]<stderr>:[ip-172-31-6-189:00796] [ 0] [1,8]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x8ea19)[0x7f3ea0ff3a19]
+[1,8]<stderr>:[ip-172-31-3-127:00678] [11] [1,4]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(+0x3ef20)[0x7f46c8748f20]
+[1,4]<stderr>:[ip-172-31-6-189:00796] [ 1] [1,4]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(gsignal+0xc7)[0x7f46c8748e97]
+[1,4]<stderr>:[ip-172-31-6-189:00796] [ 2] [1,8]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0xbd8dc)[0x7f3ea10228dc]
+[1,8]<stderr>:[ip-172-31-3-127:00678] [12] [1,4]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(abort+0x141)[0x7f46c874a801]
+[1,4]<stderr>:[ip-172-31-6-189:00796] [ 3] [1,13]<stderr>:[ip-172-31-3-127:00680] *** Process received signal ***
+[1,13]<stderr>:[ip-172-31-3-127:00680] Signal: Aborted (6)
+[1,13]<stderr>:[ip-172-31-3-127:00680] Signal code:  (-6)
+[1,8]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZN7horovod6common18HorovodGlobalStateD1Ev+0xaa8)[0x7f3e791cd6b8]
+[1,8]<stderr>:[ip-172-31-3-127:00678] [13] [1,4]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x8c957)[0x7f46c3954957]
+[1,4]<stderr>:[ip-172-31-6-189:00796] [ 4] [1,8]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(+0x43041)[0x7f3ea5dea041]
+[1,8]<stderr>:[ip-172-31-3-127:00678] [14] /lib/x86_64-linux-gnu/libc.so.6(+0x4313a)[0x7f3ea5dea13a]
+[1,8]<stderr>:[ip-172-31-3-127:00678] [15] [1,8]<stderr>:/opt/amazon/efa/lib/libfabric.so.1(+0x5ebbf)[0x7f3d8dd82bbf]
+[1,8]<stderr>:[ip-172-31-3-127:00678] [16] /opt/amazon/efa/lib/libfabric.so.1(+0xf3f2)[0x7f3d8dd333f2]
+[1,8]<stderr>:[ip-172-31-3-127:00678] [17] /opt/amazon/efa/lib/libfabric.so.1(fi_getinfo+0x45d)[0x7f3d8dd33a9d]
+[1,8]<stderr>:[ip-172-31-3-127:00678] [18] /usr/local/lib/libnccl-net.so(+0x2045)[0x7f3db012d045]
+[1,8]<stderr>:[ip-172-31-3-127:00678] [19] [1,4]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x92ab6)[0x7f46c395aab6]
+[1,4]<stderr>:[ip-172-31-6-189:00796] [ 5] [1,8]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(+0xf1065)[0x7f3e79258065]
+[1,8]<stderr>:[ip-172-31-3-127:00678] [20] [1,8]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(+0xf492f)[0x7f3e7925b92f]
+[1,8]<stderr>:[ip-172-31-3-127:00678] [21] [1,4]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x91b19)[0x7f46c3959b19]
+[1,4]<stderr>:[ip-172-31-6-189:00796] [ 6] [1,8]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZN7horovod6common13NCCLAllreduce12InitNCCLCommERKSt6vectorINS0_16TensorTableEntryESaIS3_EERKS2_IiSaIiEE+0x1b3)[0x7f3e79219313]
+[1,8]<stderr>:[ip-172-31-3-127:00678] [22] /usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZN7horovod6common13NCCLAllreduce7ExecuteERSt6vectorINS0_16TensorTableEntryESaIS3_EERKNS0_8ResponseE+0x54)[0x7f3e792194d4]
+[1,8]<stderr>:[ip-172-31-3-127:00678] [23] [1,4]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(__gxx_personality_v0+0x2a8)[0x7f46c395a488]
+[1,4]<stderr>:[ip-172-31-6-189:00796] [ 7] /lib/x86_64-linux-gnu/libgcc_s.so.1(+0x10613)[0x7f46c36c0613]
+[1,4]<stderr>:[ip-172-31-6-189:00796] [1,4]<stderr>:[ 8] /lib/x86_64-linux-gnu/libgcc_s.so.1(_Unwind_RaiseException+0x2b1)[0x7f46c36c0b71]
+[1,4]<stderr>:[ip-172-31-6-189:00796] [ 9] [1,8]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZNK7horovod6common16OperationManager16ExecuteAllreduceERSt6vectorINS0_16TensorTableEntryESaIS3_EERKNS0_8ResponseE+0x71)[0x7f3e791e4061]
+[1,8]<stderr>:[ip-172-31-3-127:00678] [24] /usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZNK7horovod6common16OperationManager16ExecuteOperationERSt6vectorINS0_16TensorTableEntryESaIS3_EERKNS0_8ResponseE+0xa1)[0x7f3e791e4371]
+[1,8]<stderr>:[ip-172-31-3-127:00678] [25] [1,8]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(+0x5e440)[0x7f3e791c5440]
+[1,8]<stderr>:[ip-172-31-3-127:00678] [26] /usr/local/lib/python3.6/dist-packages/torch/_C.cpython-36m-x86_64-linux-gnu.so(+0xaecf)[0x7f3ea22b1ecf]
+[1,8]<stderr>:[ip-172-31-3-127:00678] [27] /lib/x86_64-linux-gnu/libpthread.so.0(+0x76db)[0x7f3ea5b8f6db]
+[1,8]<stderr>:[ip-172-31-3-127:00678] [28] [1,4]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(__cxa_throw+0x37)[0x7f46c395ad17]
+[1,4]<stderr>:[ip-172-31-6-189:00796] [10] [1,8]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(clone+0x3f)[0x7f3ea5ec888f]
+[1,8]<stderr>:[ip-172-31-3-127:00678] *** End of error message ***
+[1,1]<stderr>:[ip-172-31-6-189:00797] [ 0] [1,1]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(+0x3ef20)[0x7f8e7eb89f20]
+[1,1]<stderr>:[ip-172-31-6-189:00797] [ 1] [1,4]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x8ea19)[0x7f46c3956a19]
+[1,4]<stderr>:[ip-172-31-6-189:00796] [11] [1,1]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(gsignal+0xc7)[0x7f8e7eb89e97]
+[1,1]<stderr>:[ip-172-31-6-189:00797] [ 2] [1,14]<stderr>:[ip-172-31-3-127:00679] [ 0] [1,1]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(abort+0x141)[0x7f8e7eb8b801]
+[1,1]<stderr>:[ip-172-31-6-189:00797] [ 3] [1,14]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(+0x3ef20)[0x7f3bf3f9df20]
+[1,14]<stderr>:[ip-172-31-3-127:00679] [ 1] [1,4]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0xbd8dc)[0x7f46c39858dc]
+[1,4]<stderr>:[ip-172-31-6-189:00796] [12] /usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZN7horovod6common18HorovodGlobalStateD1Ev+0xaa8)[0x7f45d0df26b8]
+[1,4]<stderr>:[ip-172-31-6-189:00796] [13] [1,14]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(gsignal+0xc7)[0x7f3bf3f9de97]
+[1,14]<stderr>:[ip-172-31-3-127:00679] [ 2] [1,1]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x8c957)[0x7f8e79d95957]
+[1,1]<stderr>:[ip-172-31-6-189:00797] [ 4] [1,4]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(+0x43041)[0x7f46c874d041]
+[1,4]<stderr>:[ip-172-31-6-189:00796] [14] [1,1]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x92ab6)[0x7f8e79d9bab6]
+[1,1]<stderr>:[ip-172-31-6-189:00797] [ 5] [1,4]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(+0x4313a)[0x7f46c874d13a]
+[1,4]<stderr>:[ip-172-31-6-189:00796] [15] /opt/amazon/efa/lib/libfabric.so.1(+0x5ebbf)[0x7f4685372bbf]
+[1,4]<stderr>:[ip-172-31-6-189:00796] [16] /opt/amazon/efa/lib/libfabric.so.1(+0xf3f2)[0x7f46853233f2]
+[1,4]<stderr>:[ip-172-31-6-189:00796] [17] [1,4]<stderr>:/opt/amazon/efa/lib/libfabric.so.1(fi_getinfo+0x45d)[0x7f4685323a9d]
+[1,4]<stderr>:[ip-172-31-6-189:00796] [18] /usr/local/lib/libnccl-net.so(+0x2045)[0x7f46877c0045]
+[1,4]<stderr>:[ip-172-31-6-189:00796] [19] [1,14]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(abort+0x141)[0x7f3bf3f9f801]
+[1,14]<stderr>:[ip-172-31-3-127:00679] [ 3] [1,1]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x91b19)[0x7f8e79d9ab19]
+[1,1]<stderr>:[ip-172-31-6-189:00797] [ 6] [1,4]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(+0xf1065)[0x7f45d0e7d065]
+[1,4]<stderr>:[ip-172-31-6-189:00796] [20] /usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(+0xf492f)[0x7f45d0e8092f]
+[1,4]<stderr>:[ip-172-31-6-189:00796] [21] [1,13]<stderr>:[ip-172-31-3-127:00680] [ 0] [1,4]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZN7horovod6common13NCCLAllreduce12InitNCCLCommERKSt6vectorINS0_16TensorTableEntryESaIS3_EERKS2_IiSaIiEE+0x1b3)[0x7f45d0e3e313]
+[1,4]<stderr>:[ip-172-31-6-189:00796] [22] [1,14]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x8c957)[0x7f3bef1a9957]
+[1,14]<stderr>:[ip-172-31-3-127:00679] [ 4] [1,4]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZN7horovod6common13NCCLAllreduce7ExecuteERSt6vectorINS0_16TensorTableEntryESaIS3_EERKNS0_8ResponseE+0x54)[0x7f45d0e3e4d4]
+[1,4]<stderr>:[ip-172-31-6-189:00796] [23] [1,1]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(__gxx_personality_v0+0x2a8)[0x7f8e79d9b488]
+[1,1]<stderr>:[ip-172-31-6-189:00797] [ 7] /lib/x86_64-linux-gnu/libgcc_s.so.1(+0x10613)[0x7f8e79b01613]
+[1,1]<stderr>:[ip-172-31-6-189:00797] [ 8] /lib/x86_64-linux-gnu/libgcc_s.so.1(_Unwind_RaiseException+0x2b1)[0x7f8e79b01b71]
+[1,1]<stderr>:[ip-172-31-6-189:00797] [ 9] [1,13]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(+0x3ef20)[0x7f1ee487ff20]
+[1,13]<stderr>:[ip-172-31-3-127:00680] [ 1] [1,4]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZNK7horovod6common16OperationManager16ExecuteAllreduceERSt6vectorINS0_16TensorTableEntryESaIS3_EERKNS0_8ResponseE+0x71)[0x7f45d0e09061]
+[1,4]<stderr>:[ip-172-31-6-189:00796] [24] /usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZNK7horovod6common16OperationManager16ExecuteOperationERSt6vectorINS0_16TensorTableEntryESaIS3_EERKNS0_8ResponseE+0xa1)[0x7f45d0e09371]
+[1,4]<stderr>:[ip-172-31-6-189:00796] [25] [1,10]<stderr>:terminate called after throwing an instance of 'std::system_error'
+[1,10]<stderr>:  what():  Resource deadlock avoided
+[1,1]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(__cxa_throw+0x37)[0x7f8e79d9bd17]
+[1,1]<stderr>:[ip-172-31-6-189:00797] [10] [1,4]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(+0x5e440)[0x7f45d0dea440]
+[1,4]<stderr>:[ip-172-31-6-189:00796] [26] /usr/local/lib/python3.6/dist-packages/torch/_C.cpython-36m-x86_64-linux-gnu.so(+0xaecf)[0x7f46c4c14ecf]
+[1,4]<stderr>:[ip-172-31-6-189:00796] [27] /lib/x86_64-linux-gnu/libpthread.so.0(+0x76db)[0x7f46c84f26db]
+[1,4]<stderr>:[ip-172-31-6-189:00796] [28] [1,13]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(gsignal+0xc7)[0x7f1ee487fe97]
+[1,13]<stderr>:[ip-172-31-3-127:00680] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x141)[0x7f1ee4881801]
+[1,13]<stderr>:[ip-172-31-3-127:00680] [ 3] [1,1]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x8ea19)[0x7f8e79d97a19]
+[1,1]<stderr>:[ip-172-31-6-189:00797] [11] [1,9]<stderr>:terminate called after throwing an instance of 'std::system_error'
+[1,9]<stderr>:  what():  Resource deadlock avoided
+[1,4]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(clone+0x3f)[0x7f46c882b88f]
+[1,4]<stderr>:[ip-172-31-6-189:00796] *** End of error message ***
+[1,14]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x92ab6)[0x7f3bef1afab6]
+[1,14]<stderr>:[ip-172-31-3-127:00679] [ 5] /usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x91b19)[0x7f3bef1aeb19]
+[1,14]<stderr>:[ip-172-31-3-127:00679] [1,13]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x8c957)[0x7f1edfa8b957]
+[1,13]<stderr>:[ip-172-31-3-127:00680] [ 4] [1,1]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0xbd8dc)[0x7f8e79dc68dc]
+[1,1]<stderr>:[ip-172-31-6-189:00797] [12] [1,1]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZN7horovod6common18HorovodGlobalStateD1Ev+0xaa8)[0x7f8d872336b8]
+[1,1]<stderr>:[ip-172-31-6-189:00797] [13] [1,10]<stderr>:[ip-172-31-3-127:00683] *** Process received signal ***
+[1,10]<stderr>:[ip-172-31-3-127:00683] Signal: Aborted (6)
+[1,10]<stderr>:[ip-172-31-3-127:00683] Signal code:  (-6)
+[1,1]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(+0x43041)[0x7f8e7eb8e041]
+[1,1]<stderr>:[ip-172-31-6-189:00797] [14] [1,9]<stderr>:[ip-172-31-3-127:00681] *** Process received signal ***
+[1,9]<stderr>:[ip-172-31-3-127:00681] Signal: Aborted (6)
+[1,9]<stderr>:[ip-172-31-3-127:00681] Signal code:  (-6)
+[1,1]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(+0x4313a)[0x7f8e7eb8e13a]
+[1,1]<stderr>:[ip-172-31-6-189:00797] [15] /opt/amazon/efa/lib/libfabric.so.1(+0x5ebbf)[0x7f8e30bc5bbf]
+[1,1]<stderr>:[ip-172-31-6-189:00797] [16] /opt/amazon/efa/lib/libfabric.so.1(+0xf3f2)[0x7f8e30b763f2]
+[1,1]<stderr>:[ip-172-31-6-189:00797] [17] /opt/amazon/efa/lib/libfabric.so.1(fi_getinfo+0x45d)[0x7f8e30b76a9d]
+[1,1]<stderr>:[ip-172-31-6-189:00797] [18] /usr/local/lib/libnccl-net.so(+0x2045)[0x7f8e3343f045]
+[1,1]<stderr>:[ip-172-31-6-189:00797] [19] [1,14]<stderr>:[ 6] /usr/lib/x86_64-linux-gnu/libstdc++.so.6(__gxx_personality_v0+0x2a8)[0x7f3bef1af488]
+[1,14]<stderr>:[ip-172-31-3-127:00679] [ 7] /lib/x86_64-linux-gnu/libgcc_s.so.1(+0x10613)[0x7f3beef15613]
+[1,14]<stderr>:[ip-172-31-3-127:00679] [ 8] [1,1]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(+0xf1065)[0x7f8d872be065]
+[1,1]<stderr>:[ip-172-31-6-189:00797] [20] /usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(+0xf492f)[0x7f8d872c192f]
+[1,1]<stderr>:[ip-172-31-6-189:00797] [21] /usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZN7horovod6common13NCCLAllreduce12InitNCCLCommERKSt6vectorINS0_16TensorTableEntryESaIS3_EERKS2_IiSaIiEE+0x1b3)[0x7f8d8727f313]
+[1,1]<stderr>:[ip-172-31-6-189:00797] [1,13]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x92ab6)[0x7f1edfa91ab6]
+[1,13]<stderr>:[ip-172-31-3-127:00680] [ 5] /usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x91b19)[0x7f1edfa90b19]
+[1,13]<stderr>:[ip-172-31-3-127:00680] [ 6] [1,1]<stderr>:[22] /usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZN7horovod6common13NCCLAllreduce7ExecuteERSt6vectorINS0_16TensorTableEntryESaIS3_EERKNS0_8ResponseE+0x54)[0x7f8d8727f4d4]
+[1,1]<stderr>:[ip-172-31-6-189:00797] [23] [1,14]<stderr>:/lib/x86_64-linux-gnu/libgcc_s.so.1(_Unwind_RaiseException+0x2b1)[0x7f3beef15b71]
+[1,14]<stderr>:[ip-172-31-3-127:00679] [ 9] /usr/lib/x86_64-linux-gnu/libstdc++.so.6(__cxa_throw+0x37)[0x7f3bef1afd17]
+[1,14]<stderr>:[ip-172-31-3-127:00679] [10] [1,1]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZNK7horovod6common16OperationManager16ExecuteAllreduceERSt6vectorINS0_16TensorTableEntryESaIS3_EERKNS0_8ResponseE+0x71)[0x7f8d8724a061]
+[1,1]<stderr>:[ip-172-31-6-189:00797] [24] [1,13]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(__gxx_personality_v0+0x2a8)[0x7f1edfa91488]
+[1,13]<stderr>:[ip-172-31-3-127:00680] [ 7] /lib/x86_64-linux-gnu/libgcc_s.so.1(+0x10613)[0x7f1edf7f7613]
+[1,13]<stderr>:[ip-172-31-3-127:00680] [ 8] /lib/x86_64-linux-gnu/libgcc_s.so.1(_Unwind_RaiseException+0x2b1)[0x7f1edf7f7b71]
+[1,13]<stderr>:[ip-172-31-3-127:00680] [1,1]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZNK7horovod6common16OperationManager16ExecuteOperationERSt6vectorINS0_16TensorTableEntryESaIS3_EERKNS0_8ResponseE+0xa1)[0x7f8d8724a371]
+[1,1]<stderr>:[ip-172-31-6-189:00797] [25] /usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(+0x5e440)[0x7f8d8722b440]
+[1,1]<stderr>:[ip-172-31-6-189:00797] [26] [1,1]<stderr>:/usr/local/lib/python3.6/dist-packages/torch/_C.cpython-36m-x86_64-linux-gnu.so(+0xaecf)[0x7f8e7b055ecf]
+[1,1]<stderr>:[ip-172-31-6-189:00797] [27] /lib/x86_64-linux-gnu/libpthread.so.0(+0x76db)[0x7f8e7e9336db]
+[1,1]<stderr>:[ip-172-31-6-189:00797] [28] [1,14]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x8ea19)[0x7f3bef1aba19]
+[1,14]<stderr>:[ip-172-31-3-127:00679] [11] [1,1]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(clone+0x3f)[0x7f8e7ec6c88f]
+[1,1]<stderr>:[ip-172-31-6-189:00797] *** End of error message ***
+[1,13]<stderr>:[ 9] [1,12]<stderr>:terminate called after throwing an instance of 'std::system_error'
+[1,12]<stderr>:  what():  Resource deadlock avoided
+[1,14]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0xbd8dc)[0x7f3bef1da8dc]
+[1,14]<stderr>:[ip-172-31-3-127:00679] [12] /usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZN7horovod6common18HorovodGlobalStateD1Ev+0xaa8)[0x7f3afc6476b8]
+[1,14]<stderr>:[ip-172-31-3-127:00679] [1,13]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(__cxa_throw+0x37)[0x7f1edfa91d17]
+[1,13]<stderr>:[ip-172-31-3-127:00680] [10] [1,12]<stderr>:[ip-172-31-3-127:00682] *** Process received signal ***
+[1,12]<stderr>:[ip-172-31-3-127:00682] Signal: Aborted (6)
+[1,12]<stderr>:[ip-172-31-3-127:00682] Signal code:  (-6)
+[1,13]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x8ea19)[0x7f1edfa8da19]
+[1,13]<stderr>:[ip-172-31-3-127:00680] [11] [1,14]<stderr>:[13] /lib/x86_64-linux-gnu/libc.so.6(+0x43041)[0x7f3bf3fa2041]
+[1,14]<stderr>:[ip-172-31-3-127:00679] [14] /lib/x86_64-linux-gnu/libc.so.6(+0x4313a)[0x7f3bf3fa213a]
+[1,14]<stderr>:[ip-172-31-3-127:00679] [15] /opt/amazon/efa/lib/libfabric.so.1(+0x5ebbf)[0x7f3afc363bbf]
+[1,14]<stderr>:[ip-172-31-3-127:00679] [16] /opt/amazon/efa/lib/libfabric.so.1(+0xf3f2)[0x7f3afc3143f2]
+[1,14]<stderr>:[ip-172-31-3-127:00679] [1,13]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0xbd8dc)[0x7f1edfabc8dc]
+[1,13]<stderr>:[ip-172-31-3-127:00680] [12] /usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZN7horovod6common18HorovodGlobalStateD1Ev+0xaa8)[0x7f1decf296b8]
+[1,13]<stderr>:[ip-172-31-3-127:00680] [13] [1,14]<stderr>:[17] /opt/amazon/efa/lib/libfabric.so.1(fi_getinfo+0x45d)[0x7f3afc314a9d]
+[1,14]<stderr>:[ip-172-31-3-127:00679] [18] /usr/local/lib/libnccl-net.so(+0x2045)[0x7f3ba4019045]
+[1,14]<stderr>:[ip-172-31-3-127:00679] [19] /usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(+0xf1065)[0x7f3afc6d2065]
+[1,14]<stderr>:[ip-172-31-3-127:00679] [20] [1,13]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(+0x43041)[0x7f1ee4884041]
+[1,13]<stderr>:[ip-172-31-3-127:00680] [14] [1,14]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(+0xf492f)[0x7f3afc6d592f]
+[1,14]<stderr>:[ip-172-31-3-127:00679] [21] /usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZN7horovod6common13NCCLAllreduce12InitNCCLCommERKSt6vectorINS0_16TensorTableEntryESaIS3_EERKS2_IiSaIiEE+0x1b3)[0x7f3afc693313]
+[1,14]<stderr>:[ip-172-31-3-127:00679] [22] [1,13]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(+0x4313a)[0x7f1ee488413a]
+[1,13]<stderr>:[ip-172-31-3-127:00680] [15] /opt/amazon/efa/lib/libfabric.so.1(+0x5ebbf)[0x7f1ea789dbbf]
+[1,13]<stderr>:[ip-172-31-3-127:00680] [16] /opt/amazon/efa/lib/libfabric.so.1(+0xf3f2)[0x7f1ea784e3f2]
+[1,13]<stderr>:[ip-172-31-3-127:00680] [17] /opt/amazon/efa/lib/libfabric.so.1(fi_getinfo+0x45d)[0x7f1ea784ea9d]
+[1,13]<stderr>:[ip-172-31-3-127:00680] [18] /usr/local/lib/libnccl-net.so(+0x2045)[0x7f1ea7b1d045]
+[1,13]<stderr>:[ip-172-31-3-127:00680] [19] [1,14]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZN7horovod6common13NCCLAllreduce7ExecuteERSt6vectorINS0_16TensorTableEntryESaIS3_EERKNS0_8ResponseE+0x54)[0x7f3afc6934d4]
+[1,14]<stderr>:[ip-172-31-3-127:00679] [23] /usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZNK7horovod6common16OperationManager16ExecuteAllreduceERSt6vectorINS0_16TensorTableEntryESaIS3_EERKNS0_8ResponseE+0x71)[0x7f3afc65e061]
+[1,14]<stderr>:[ip-172-31-3-127:00679] [24] [1,13]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(+0xf1065)[0x7f1decfb4065]
+[1,13]<stderr>:[ip-172-31-3-127:00680] [20] /usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(+0xf492f)[0x7f1decfb792f]
+[1,13]<stderr>:[ip-172-31-3-127:00680] [21] [1,10]<stderr>:[ip-172-31-3-127:00683] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x3ef20)[0x7fe11b17cf20]
+[1,10]<stderr>:[ip-172-31-3-127:00683] [ 1] [1,14]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZNK7horovod6common16OperationManager16ExecuteOperationERSt6vectorINS0_16TensorTableEntryESaIS3_EERKNS0_8ResponseE+0xa1)[0x7f3afc65e371]
+[1,14]<stderr>:[ip-172-31-3-127:00679] [25] /usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(+0x5e440)[0x7f3afc63f440]
+[1,14]<stderr>:[ip-172-31-3-127:00679] [26] /usr/local/lib/python3.6/dist-packages/torch/_C.cpython-36m-x86_64-linux-gnu.so(+0xaecf)[0x7f3bf0469ecf]
+[1,14]<stderr>:[ip-172-31-3-127:00679] [27] [1,9]<stderr>:[ip-172-31-3-127:00681] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x3ef20)[0x7f6636e4df20]
+[1,9]<stderr>:[ip-172-31-3-127:00681] [ 1] [1,10]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(gsignal+0xc7)[0x7fe11b17ce97]
+[1,10]<stderr>:[ip-172-31-3-127:00683] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x141)[0x7fe11b17e801]
+[1,10]<stderr>:[ip-172-31-3-127:00683] [ 3] [1,13]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZN7horovod6common13NCCLAllreduce12InitNCCLCommERKSt6vectorINS0_16TensorTableEntryESaIS3_EERKS2_IiSaIiEE+0x1b3)[0x7f1decf75313]
+[1,13]<stderr>:[ip-172-31-3-127:00680] [22] /usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZN7horovod6common13NCCLAllreduce7ExecuteERSt6vectorINS0_16TensorTableEntryESaIS3_EERKNS0_8ResponseE+0x54)[0x7f1decf754d4]
+[1,13]<stderr>:[ip-172-31-3-127:00680] [23] /usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZNK7horovod6common16OperationManager16ExecuteAllreduceERSt6vectorINS0_16TensorTableEntryESaIS3_EERKNS0_8ResponseE+0x71)[0x7f1decf40061]
+[1,13]<stderr>:[ip-172-31-3-127:00680] [24] [1,14]<stderr>:/lib/x86_64-linux-gnu/libpthread.so.0(+0x76db)[0x7f3bf3d476db]
+[1,14]<stderr>:[ip-172-31-3-127:00679] [28] /lib/x86_64-linux-gnu/libc.so.6(clone+0x3f)[0x7f3bf408088f]
+[1,14]<stderr>:[ip-172-31-3-127:00679] *** End of error message ***
+[1,13]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZNK7horovod6common16OperationManager16ExecuteOperationERSt6vectorINS0_16TensorTableEntryESaIS3_EERKNS0_8ResponseE+0xa1)[0x7f1decf40371]
+[1,13]<stderr>:[ip-172-31-3-127:00680] [25] /usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(+0x5e440)[0x7f1decf21440]
+[1,13]<stderr>:[ip-172-31-3-127:00680] [26] /usr/local/lib/python3.6/dist-packages/torch/_C.cpython-36m-x86_64-linux-gnu.so(+0xaecf)[0x7f1ee0d4becf]
+[1,13]<stderr>:[ip-172-31-3-127:00680] [27] [1,9]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(gsignal+0xc7)[0x7f6636e4de97]
+[1,9]<stderr>:[ip-172-31-3-127:00681] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x141)[0x7f6636e4f801]
+[1,9]<stderr>:[ip-172-31-3-127:00681] [ 3] [1,10]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x8c957)[0x7fe116388957]
+[1,10]<stderr>:[ip-172-31-3-127:00683] [ 4] [1,13]<stderr>:/lib/x86_64-linux-gnu/libpthread.so.0(+0x76db)[0x7f1ee46296db]
+[1,13]<stderr>:[ip-172-31-3-127:00680] [28] /lib/x86_64-linux-gnu/libc.so.6(clone+0x3f)[0x7f1ee496288f]
+[1,9]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x8c957)[0x7f6632059957]
+[1,9]<stderr>:[ip-172-31-3-127:00681] [ 4] [1,10]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x92ab6)[0x7fe11638eab6]
+[1,10]<stderr>:[ip-172-31-3-127:00683] [ 5] [1,9]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x92ab6)[0x7f663205fab6]
+[1,9]<stderr>:[ip-172-31-3-127:00681] [ 5] [1,13]<stderr>:[ip-172-31-3-127:00680] *** End of error message ***
+[1,10]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x91b19)[0x7fe11638db19]
+[1,10]<stderr>:[ip-172-31-3-127:00683] [ 6] /usr/lib/x86_64-linux-gnu/libstdc++.so.6(__gxx_personality_v0+0x2a8)[0x7fe11638e488]
+[1,12]<stderr>:[ip-172-31-3-127:00682] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x3ef20)[0x7f08695b8f20]
+[1,12]<stderr>:[ip-172-31-3-127:00682] [ 1] [1,9]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x91b19)[0x7f663205eb19]
+[1,9]<stderr>:[ip-172-31-3-127:00681] [ 6] [1,10]<stderr>:[ip-172-31-3-127:00683] [ 7] /lib/x86_64-linux-gnu/libgcc_s.so.1(+0x10613)[0x7fe1160f4613]
+[1,10]<stderr>:[ip-172-31-3-127:00683] [ 8] /lib/x86_64-linux-gnu/libgcc_s.so.1(_Unwind_RaiseException+0x2b1)[0x7fe1160f4b71]
+[1,10]<stderr>:[ip-172-31-3-127:00683] [ 9] [1,9]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(__gxx_personality_v0+0x2a8)[0x7f663205f488]
+[1,9]<stderr>:[ip-172-31-3-127:00681] [ 7] /lib/x86_64-linux-gnu/libgcc_s.so.1(+0x10613)[0x7f6631dc5613]
+[1,9]<stderr>:[ip-172-31-3-127:00681] [ 8] /lib/x86_64-linux-gnu/libgcc_s.so.1(_Unwind_RaiseException+0x2b1)[0x7f6631dc5b71]
+[1,9]<stderr>:[ip-172-31-3-127:00681] [ 9] [1,12]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(gsignal+0xc7)[0x7f08695b8e97]
+[1,12]<stderr>:[ip-172-31-3-127:00682] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x141)[0x7f08695ba801]
+[1,12]<stderr>:[ip-172-31-3-127:00682] [ 3] [1,10]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(__cxa_throw+0x37)[0x7fe11638ed17]
+[1,10]<stderr>:[ip-172-31-3-127:00683] [10] [1,12]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x8c957)[0x7f08647c4957]
+[1,12]<stderr>:[ip-172-31-3-127:00682] [ 4] [1,9]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(__cxa_throw+0x37)[0x7f663205fd17]
+[1,9]<stderr>:[ip-172-31-3-127:00681] [10] /usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x8ea19)[0x7f663205ba19]
+[1,10]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x8ea19)[0x7fe11638aa19]
+[1,10]<stderr>:[ip-172-31-3-127:00683] [11] [1,9]<stderr>:[ip-172-31-3-127:00681] [11] [1,12]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x92ab6)[0x7f08647caab6]
+[1,12]<stderr>:[ip-172-31-3-127:00682] [ 5] [1,10]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0xbd8dc)[0x7fe1163b98dc]
+[1,10]<stderr>:[ip-172-31-3-127:00683] [12] /usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZN7horovod6common18HorovodGlobalStateD1Ev+0xaa8)[0x7fe0fe49a6b8]
+[1,10]<stderr>:[ip-172-31-3-127:00683] [13] [1,12]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x91b19)[0x7f08647c9b19]
+[1,12]<stderr>:[ip-172-31-3-127:00682] [ 6] [1,9]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0xbd8dc)[0x7f663208a8dc]
+[1,9]<stderr>:[ip-172-31-3-127:00681] [12] /usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZN7horovod6common18HorovodGlobalStateD1Ev+0xaa8)[0x7f653f4f76b8]
+[1,9]<stderr>:[ip-172-31-3-127:00681] [13] [1,10]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(+0x43041)[0x7fe11b181041]
+[1,10]<stderr>:[ip-172-31-3-127:00683] [14] /lib/x86_64-linux-gnu/libc.so.6(+0x4313a)[0x7fe11b18113a]
+[1,10]<stderr>:[ip-172-31-3-127:00683] [15] /opt/amazon/efa/lib/libfabric.so.1(+0x5ebbf)[0x7fe001965bbf]
+[1,10]<stderr>:[ip-172-31-3-127:00683] [16] /opt/amazon/efa/lib/libfabric.so.1(+0xf3f2)[0x7fe0019163f2]
+[1,10]<stderr>:[ip-172-31-3-127:00683] [17] [1,9]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(+0x43041)[0x7f6636e52041]
+[1,9]<stderr>:[ip-172-31-3-127:00681] [14] /lib/x86_64-linux-gnu/libc.so.6(+0x4313a)[0x7f6636e5213a]
+[1,9]<stderr>:[ip-172-31-3-127:00681] [15] /opt/amazon/efa/lib/libfabric.so.1(+0x5ebbf)[0x7f65e1870bbf]
+[1,9]<stderr>:[ip-172-31-3-127:00681] [16] /opt/amazon/efa/lib/libfabric.so.1(+0xf3f2)[0x7f65e18213f2]
+[1,9]<stderr>:[ip-172-31-3-127:00681] [17] /opt/amazon/efa/lib/libfabric.so.1(fi_getinfo+0x45d)[0x7f65e1821a9d]
+[1,9]<stderr>:[ip-172-31-3-127:00681] [18] /usr/local/lib/libnccl-net.so(+0x2045)[0x7f65e1af0045]
+[1,9]<stderr>:[ip-172-31-3-127:00681] [19] [1,12]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(__gxx_personality_v0+0x2a8)[0x7f08647ca488]
+[1,12]<stderr>:[ip-172-31-3-127:00682] [ 7] /lib/x86_64-linux-gnu/libgcc_s.so.1(+0x10613)[0x7f0864530613]
+[1,12]<stderr>:[ip-172-31-3-127:00682] [ 8] /lib/x86_64-linux-gnu/libgcc_s.so.1(_Unwind_RaiseException+0x2b1)[0x7f0864530b71]
+[1,12]<stderr>:[ip-172-31-3-127:00682] [ 9] /usr/lib/x86_64-linux-gnu/libstdc++.so.6(__cxa_throw+0x37)[0x7f08647cad17]
+[1,12]<stderr>:[ip-172-31-3-127:00682] [10] [1,10]<stderr>:/opt/amazon/efa/lib/libfabric.so.1(fi_getinfo+0x45d)[0x7fe001916a9d]
+[1,10]<stderr>:[ip-172-31-3-127:00683] [18] /usr/local/lib/libnccl-net.so(+0x2045)[0x7fe001be5045]
+[1,10]<stderr>:[ip-172-31-3-127:00683] [19] /usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(+0xf1065)[0x7fe0fe525065]
+[1,10]<stderr>:[ip-172-31-3-127:00683] [20] /usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(+0xf492f)[0x7fe0fe52892f]
+[1,10]<stderr>:[ip-172-31-3-127:00683] [21] [1,9]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(+0xf1065)[0x7f653f582065]
+[1,9]<stderr>:[ip-172-31-3-127:00681] [20] /usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(+0xf492f)[0x7f653f58592f]
+[1,9]<stderr>:[ip-172-31-3-127:00681] [21] [1,10]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZN7horovod6common13NCCLAllreduce12InitNCCLCommERKSt6vectorINS0_16TensorTableEntryESaIS3_EERKS2_IiSaIiEE+0x1b3)[0x7fe0fe4e6313]
+[1,10]<stderr>:[ip-172-31-3-127:00683] [22] /usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZN7horovod6common13NCCLAllreduce7ExecuteERSt6vectorINS0_16TensorTableEntryESaIS3_EERKNS0_8ResponseE+0x54)[0x7fe0fe4e64d4]
+[1,10]<stderr>:[ip-172-31-3-127:00683] [23] /usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZNK7horovod6common16OperationManager16ExecuteAllreduceERSt6vectorINS0_16TensorTableEntryESaIS3_EERKNS0_8ResponseE+0x71)[0x7fe0fe4b1061]
+[1,12]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x8ea19)[0x7f08647c6a19]
+[1,12]<stderr>:[ip-172-31-3-127:00682] [11] [1,9]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZN7horovod6common13NCCLAllreduce12InitNCCLCommERKSt6vectorINS0_16TensorTableEntryESaIS3_EERKS2_IiSaIiEE+0x1b3)[0x7f653f543313]
+[1,9]<stderr>:[ip-172-31-3-127:00681] [22] /usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZN7horovod6common13NCCLAllreduce7ExecuteERSt6vectorINS0_16TensorTableEntryESaIS3_EERKNS0_8ResponseE+0x54)[0x7f653f5434d4]
+[1,9]<stderr>:[ip-172-31-3-127:00681] [23] [1,10]<stderr>:[ip-172-31-3-127:00683] [24] /usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZNK7horovod6common16OperationManager16ExecuteOperationERSt6vectorINS0_16TensorTableEntryESaIS3_EERKNS0_8ResponseE+0xa1)[0x7fe0fe4b1371]
+[1,10]<stderr>:[ip-172-31-3-127:00683] [25] /usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(+0x5e440)[0x7fe0fe492440]
+[1,10]<stderr>:[ip-172-31-3-127:00683] [26] [1,9]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZNK7horovod6common16OperationManager16ExecuteAllreduceERSt6vectorINS0_16TensorTableEntryESaIS3_EERKNS0_8ResponseE+0x71)[0x7f653f50e061]
+[1,9]<stderr>:[ip-172-31-3-127:00681] [24] /usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZNK7horovod6common16OperationManager16ExecuteOperationERSt6vectorINS0_16TensorTableEntryESaIS3_EERKNS0_8ResponseE+0xa1)[0x7f653f50e371]
+[1,9]<stderr>:[ip-172-31-3-127:00681] [25] /usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(+0x5e440)[0x7f653f4ef440]
+[1,9]<stderr>:[ip-172-31-3-127:00681] [26] [1,12]<stderr>:/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0xbd8dc)[0x7f08647f58dc]
+[1,12]<stderr>:[ip-172-31-3-127:00682] [12] /usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZN7horovod6common18HorovodGlobalStateD1Ev+0xaa8)[0x7f0771c626b8]
+[1,12]<stderr>:[ip-172-31-3-127:00682] [13] [1,10]<stderr>:/usr/local/lib/python3.6/dist-packages/torch/_C.cpython-36m-x86_64-linux-gnu.so(+0xaecf)[0x7fe117648ecf]
+[1,10]<stderr>:[ip-172-31-3-127:00683] [27] /lib/x86_64-linux-gnu/libpthread.so.0(+0x76db)[0x7fe11af266db]
+[1,10]<stderr>:[ip-172-31-3-127:00683] [28] [1,12]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(+0x43041)[0x7f08695bd041]
+[1,12]<stderr>:[ip-172-31-3-127:00682] [14] /lib/x86_64-linux-gnu/libc.so.6(+0x4313a)[0x7f08695bd13a]
+[1,12]<stderr>:[ip-172-31-3-127:00682] [15] /opt/amazon/efa/lib/libfabric.so.1(+0x5ebbf)[0x7f081d7e6bbf]
+[1,9]<stderr>:/usr/local/lib/python3.6/dist-packages/torch/_C.cpython-36m-x86_64-linux-gnu.so(+0xaecf)[0x7f6633319ecf]
+[1,9]<stderr>:[ip-172-31-3-127:00681] [27] /lib/x86_64-linux-gnu/libpthread.so.0(+0x76db)[0x7f6636bf76db]
+[1,9]<stderr>:[ip-172-31-3-127:00681] [28] /lib/x86_64-linux-gnu/libc.so.6(clone+0x3f)[0x7f6636f3088f]
+[1,10]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(clone+0x3f)[0x7fe11b25f88f]
+[1,10]<stderr>:[ip-172-31-3-127:00683] *** End of error message ***
+[1,9]<stderr>:[ip-172-31-3-127:00681] *** End of error message ***
+[1,12]<stderr>:[ip-172-31-3-127:00682] [16] /opt/amazon/efa/lib/libfabric.so.1(+0xf3f2)[0x7f081d7973f2]
+[1,12]<stderr>:[ip-172-31-3-127:00682] [17] /opt/amazon/efa/lib/libfabric.so.1(fi_getinfo+0x45d)[0x7f081d797a9d]
+[1,12]<stderr>:[ip-172-31-3-127:00682] [18] /usr/local/lib/libnccl-net.so(+0x2045)[0x7f081da66045]
+[1,12]<stderr>:[ip-172-31-3-127:00682] [19] /usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(+0xf1065)[0x7f0771ced065]
+[1,12]<stderr>:[ip-172-31-3-127:00682] [20] /usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(+0xf492f)[0x7f0771cf092f]
+[1,12]<stderr>:[ip-172-31-3-127:00682] [21] [1,12]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZN7horovod6common13NCCLAllreduce12InitNCCLCommERKSt6vectorINS0_16TensorTableEntryESaIS3_EERKS2_IiSaIiEE+0x1b3)[0x7f0771cae313]
+[1,12]<stderr>:[ip-172-31-3-127:00682] [22] /usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZN7horovod6common13NCCLAllreduce7ExecuteERSt6vectorINS0_16TensorTableEntryESaIS3_EERKNS0_8ResponseE+0x54)[0x7f0771cae4d4]
+[1,12]<stderr>:[ip-172-31-3-127:00682] [23] [1,12]<stderr>:/usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZNK7horovod6common16OperationManager16ExecuteAllreduceERSt6vectorINS0_16TensorTableEntryESaIS3_EERKNS0_8ResponseE+0x71)[0x7f0771c79061]
+[1,12]<stderr>:[ip-172-31-3-127:00682] [24] /usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(_ZNK7horovod6common16OperationManager16ExecuteOperationERSt6vectorINS0_16TensorTableEntryESaIS3_EERKNS0_8ResponseE+0xa1)[0x7f0771c79371]
+[1,12]<stderr>:[ip-172-31-3-127:00682] [25] /usr/local/lib/python3.6/dist-packages/horovod-0.18.2-py3.6-linux-x86_64.egg/horovod/torch/mpi_lib_v2.cpython-36m-x86_64-linux-gnu.so(+0x5e440)[0x7f0771c5a440]
+[1,12]<stderr>:[ip-172-31-3-127:00682] [26] [1,12]<stderr>:/usr/local/lib/python3.6/dist-packages/torch/_C.cpython-36m-x86_64-linux-gnu.so(+0xaecf)[0x7f0865a84ecf]
+[1,12]<stderr>:[ip-172-31-3-127:00682] [27] /lib/x86_64-linux-gnu/libpthread.so.0(+0x76db)[0x7f08693626db]
+[1,12]<stderr>:[ip-172-31-3-127:00682] [28] [1,12]<stderr>:/lib/x86_64-linux-gnu/libc.so.6(clone+0x3f)[0x7f086969b88f]
+[1,12]<stderr>:[ip-172-31-3-127:00682] *** End of error message ***
+[1,3]<stdout>:ip-172-31-6-189:152:687 [3] NCCL INFO NET/OFI Forcing AWS OFI ndev 4
+[1,3]<stdout>:ip-172-31-6-189:152:687 [3] NCCL INFO NET/OFI Selected Provider is efa
+[1,5]<stdout>:ip-172-31-6-189:154:689 [5] NCCL INFO NET/OFI Forcing AWS OFI ndev 4
+[1,5]<stdout>:ip-172-31-6-189:154:689 [5] NCCL INFO NET/OFI Selected Provider is efa
+[1,2]<stdout>:ip-172-31-6-189:151:692 [2] NCCL INFO NET/OFI Forcing AWS OFI ndev 4
+[1,2]<stdout>:ip-172-31-6-189:151:692 [2] NCCL INFO NET/OFI Selected Provider is efa
+[1,15]<stdout>:ip-172-31-3-127:43:574 [7] NCCL INFO NET/OFI Forcing AWS OFI ndev 4
+[1,15]<stdout>:ip-172-31-3-127:43:574 [7] NCCL INFO NET/OFI Selected Provider is efa
+[1,4]<stdout>:ip-172-31-6-189:153:691 [4] NCCL INFO NET/OFI Forcing AWS OFI ndev 4
+[1,4]<stdout>:ip-172-31-6-189:153:691 [4] NCCL INFO NET/OFI Selected Provider is efa
+[1,11]<stdout>:ip-172-31-3-127:39:580 [3] NCCL INFO NET/OFI Forcing AWS OFI ndev 4
+[1,11]<stdout>:ip-172-31-3-127:39:580 [3] NCCL INFO NET/OFI Selected Provider is efa
+[1,6]<stdout>:ip-172-31-6-189:155:688 [6] NCCL INFO NET/OFI Forcing AWS OFI ndev 4
+[1,6]<stdout>:ip-172-31-6-189:155:688 [6] NCCL INFO NET/OFI Selected Provider is efa
+[1,7]<stdout>:ip-172-31-6-189:156:690 [7] NCCL INFO NET/OFI Forcing AWS OFI ndev 4
+[1,7]<stdout>:ip-172-31-6-189:156:690 [7] NCCL INFO NET/OFI Selected Provider is efa
+[1,8]<stdout>:ip-172-31-3-127:36:572 [0] NCCL INFO NET/OFI Forcing AWS OFI ndev 4
+[1,8]<stdout>:ip-172-31-3-127:36:572 [0] NCCL INFO NET/OFI Selected Provider is efa
+[1,14]<stdout>:ip-172-31-3-127:42:575 [6] NCCL INFO NET/OFI Forcing AWS OFI ndev 4
+[1,14]<stdout>:ip-172-31-3-127:42:575 [6] NCCL INFO NET/OFI Selected Provider is efa
+[1,12]<stdout>:ip-172-31-3-127:40:578 [4] NCCL INFO NET/OFI Forcing AWS OFI ndev 4
+[1,12]<stdout>:ip-172-31-3-127:40:578 [4] NCCL INFO NET/OFI Selected Provider is efa
+[1,13]<stdout>:ip-172-31-3-127:41:581 [5] NCCL INFO NET/OFI Forcing AWS OFI ndev 4
+[1,13]<stdout>:ip-172-31-3-127:41:581 [5] NCCL INFO NET/OFI Selected Provider is efa
+[1,9]<stdout>:ip-172-31-3-127:37:573 [1] NCCL INFO NET/OFI Forcing AWS OFI ndev 4
+[1,9]<stdout>:ip-172-31-3-127:37:573 [1] NCCL INFO NET/OFI Selected Provider is efa
+[1,10]<stdout>:ip-172-31-3-127:38:579 [2] NCCL INFO NET/OFI Forcing AWS OFI ndev 4
+[1,10]<stdout>:ip-172-31-3-127:38:579 [2] NCCL INFO NET/OFI Selected Provider is efa
+[1,1]<stdout>:ip-172-31-6-189:150:686 [1] NCCL INFO NET/OFI Forcing AWS OFI ndev 4
+[1,1]<stdout>:ip-172-31-6-189:150:686 [1] NCCL INFO NET/OFI Selected Provider is efa
+[1,0]<stdout>:ip-172-31-6-189:149:685 [0] NCCL INFO Setting affinity for GPU 0 to ffffffff,ffffffff,ffffffff
+[1,0]<stdout>:ip-172-31-6-189:149:685 [0] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+[1,3]<stdout>:ip-172-31-6-189:152:687 [3] NCCL INFO Setting affinity for GPU 3 to ffffffff,ffffffff,ffffffff
+[1,5]<stdout>:ip-172-31-6-189:154:689 [5] NCCL INFO Setting affinity for GPU 5 to ffffffff,ffffffff,ffffffff
+[1,5]<stdout>:ip-172-31-6-189:154:689 [5] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+[1,2]<stdout>:ip-172-31-6-189:151:692 [2] NCCL INFO Setting affinity for GPU 2 to ffffffff,ffffffff,ffffffff
+[1,4]<stdout>:ip-172-31-6-189:153:691 [4] NCCL INFO Setting affinity for GPU 4 to ffffffff,ffffffff,ffffffff
+[1,15]<stdout>:ip-172-31-3-127:43:574 [7] NCCL INFO Setting affinity for GPU 7 to ffffffff,ffffffff,ffffffff
+[1,3]<stdout>:ip-172-31-6-189:152:687 [3] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+[1,6]<stdout>:ip-172-31-6-189:155:688 [6] NCCL INFO Setting affinity for GPU 6 to ffffffff,ffffffff,ffffffff
+[1,4]<stdout>:ip-172-31-6-189:153:691 [4] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+[1,7]<stdout>:ip-172-31-6-189:156:690 [7] NCCL INFO Setting affinity for GPU 7 to ffffffff,ffffffff,ffffffff
+[1,1]<stdout>:ip-172-31-6-189:150:686 [1] NCCL INFO Setting affinity for GPU 1 to ffffffff,ffffffff,ffffffff
+[1,2]<stdout>:ip-172-31-6-189:151:692 [2] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+[1,7]<stdout>:ip-172-31-6-189:156:690 [7] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+[1,6]<stdout>:ip-172-31-6-189:155:688 [6] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+[1,11]<stdout>:ip-172-31-3-127:39:580 [3] NCCL INFO Setting affinity for GPU 3 to ffffffff,ffffffff,ffffffff
+[1,15]<stdout>:ip-172-31-3-127:43:574 [7] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+[1,11]<stdout>:ip-172-31-3-127:39:580 [3] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+[1,8]<stdout>:ip-172-31-3-127:36:572 [0] NCCL INFO Setting affinity for GPU 0 to ffffffff,ffffffff,ffffffff
+[1,1]<stdout>:ip-172-31-6-189:150:686 [1] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+[1,14]<stdout>:ip-172-31-3-127:42:575 [6] NCCL INFO Setting affinity for GPU 6 to ffffffff,ffffffff,ffffffff
+[1,12]<stdout>:ip-172-31-3-127:40:578 [4] NCCL INFO Setting affinity for GPU 4 to ffffffff,ffffffff,ffffffff
+[1,13]<stdout>:ip-172-31-3-127:41:581 [5] NCCL INFO Setting affinity for GPU 5 to ffffffff,ffffffff,ffffffff
+[1,10]<stdout>:ip-172-31-3-127:38:579 [2] NCCL INFO Setting affinity for GPU 2 to ffffffff,ffffffff,ffffffff
+[1,12]<stdout>:ip-172-31-3-127:40:578 [4] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+[1,13]<stdout>:ip-172-31-3-127:41:581 [5] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+[1,9]<stdout>:ip-172-31-3-127:37:573 [1] NCCL INFO Setting affinity for GPU 1 to ffffffff,ffffffff,ffffffff
+[1,9]<stdout>:ip-172-31-3-127:37:573 [1] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+[1,14]<stdout>:ip-172-31-3-127:42:575 [6] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+[1,8]<stdout>:ip-172-31-3-127:36:572 [0] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+[1,10]<stdout>:ip-172-31-3-127:38:579 [2] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+[1,8]<stdout>:ip-172-31-3-127:36:572 [0] NCCL INFO NET/OFI [0] getCudaPath dev 0 busId 0000:00:16.0 path /sys/devices/pci0000:00/
+[1,9]<stdout>:ip-172-31-3-127:37:573 [1] NCCL INFO NET/OFI [1] getCudaPath dev 0 busId 0000:00:16.0 path /sys/devices/pci0000:00/
+[1,9]<stdout>:ip-172-31-3-127:37:573 [1] NCCL INFO NET/OFI [1] getCudaPath dev 1 busId 0000:00:17.0 path /sys/devices/pci0000:00
+[1,10]<stdout>:ip-172-31-3-127:38:579 [2] NCCL INFO NET/OFI [2] getCudaPath dev 0 busId 0000:00:16.0 path /sys/devices/pci0000:00
+[1,8]<stdout>:ip-172-31-3-127:36:572 [0] NCCL INFO NET/OFI [0] getCudaPath dev 1 busId 0000:00:17.0 path /sys/devices/pci0000:00
+[1,9]<stdout>:ip-172-31-3-127:37:573 [1] NCCL INFO NET/OFI [1] getCudaPath dev 2 busId 0000:00:18.0 path /sys/devices/pci0000:00
+[1,8]<stdout>:ip-172-31-3-127:36:572 [0] NCCL INFO NET/OFI [0] getCudaPath dev 2 busId 0000:00:18.0 path /sys/devices/pci0000:00
+[1,11]<stdout>:ip-172-31-3-127:39:580 [3] NCCL INFO NET/OFI [3] getCudaPath dev 0 busId 0000:00:16.0 path /sys/devices/pci0000:00
+[1,8]<stdout>:ip-172-31-3-127:36:572 [0] NCCL INFO NET/OFI [0] getCudaPath dev 3 busId 0000:00:19.0 path /sys/devices/pci0000:00
+[1,9]<stdout>:ip-172-31-3-127:37:573 [1] NCCL INFO NET/OFI [1] getCudaPath dev 3 busId 0000:00:19.0 path /sys/devices/pci0000:00
+[1,9]<stdout>:ip-172-31-3-127:37:573 [1] NCCL INFO CUDA Dev 1[1], AWS Libfabric NIC distance :  PHB NODE NODE NODE
+[1,8]<stdout>:ip-172-31-3-127:36:572 [0] NCCL INFO CUDA Dev 0[0], AWS Libfabric NIC distance :  PHB NODE NODE NODE
+[1,11]<stdout>:ip-172-31-3-127:39:580 [3] NCCL INFO NET/OFI [3] getCudaPath dev 1 busId 0000:00:17.0 path /sys/devices/pci0000:00/
+[1,12]<stdout>:ip-172-31-3-127:40:578 [4] NCCL INFO NET/OFI [4] getCudaPath dev 0 busId 0000:00:16.0 path /sys/devices/pci0000:00
+[1,11]<stdout>:ip-172-31-3-127:39:580 [3] NCCL INFO NET/OFI [3] getCudaPath dev 2 busId 0000:00:18.0 path /sys/devices/pci0000:00
+[1,11]<stdout>:ip-172-31-3-127:39:580 [3] NCCL INFO NET/OFI [3] getCudaPath dev 3 busId 0000:00:19.0 path /sys/devices/pci0000:00
+[1,11]<stdout>:ip-172-31-3-127:39:580 [3] NCCL INFO CUDA Dev 3[3], AWS Libfabric NIC distance :  NODE PHB NODE NODE
+[1,12]<stdout>:ip-172-31-3-127:40:578 [4] NCCL INFO NET/OFI [4] getCudaPath dev 1 busId 0000:00:17.0 path /sys/devices/pci0000:00
+[1,13]<stdout>:ip-172-31-3-127:41:581 [5] NCCL INFO NET/OFI [5] getCudaPath dev 0 busId 0000:00:16.0 path /sys/devices/pci0000:00
+[1,12]<stdout>:ip-172-31-3-127:40:578 [4] NCCL INFO NET/OFI [4] getCudaPath dev 2 busId 0000:00:18.0 path /sys/devices/pci0000:00/
+[1,13]<stdout>:ip-172-31-3-127:41:581 [5] NCCL INFO NET/OFI [5] getCudaPath dev 1 busId 0000:00:17.0 path /sys/devices/pci0000:00
+[1,12]<stdout>:ip-172-31-3-127:40:578 [4] NCCL INFO NET/OFI [4] getCudaPath dev 3 busId 0000:00:19.0 path /sys/devices/pci0000:00
+[1,12]<stdout>:ip-172-31-3-127:40:578 [4] NCCL INFO CUDA Dev 4[4], AWS Libfabric NIC distance :  NODE NODE PHB NODE
+[1,13]<stdout>:ip-172-31-3-127:41:581 [5] NCCL INFO NET/OFI [5] getCudaPath dev 2 busId 0000:00:18.0 path /sys/devices/pci0000:00/
+[1,13]<stdout>:ip-172-31-3-127:41:581 [5] NCCL INFO NET/OFI [5] getCudaPath dev 3 busId 0000:00:19.0 path /sys/devices/pci0000:00
+[1,13]<stdout>:ip-172-31-3-127:41:581 [5] NCCL INFO CUDA Dev 5[5], AWS Libfabric NIC distance :  NODE NODE PHB NODE
+[1,15]<stdout>:ip-172-31-3-127:43:574 [7] NCCL INFO NET/OFI [7] getCudaPath dev 0 busId 0000:00:16.0 path /sys/devices/pci0000:00
+[1,15]<stdout>:ip-172-31-3-127:43:574 [7] NCCL INFO NET/OFI [7] getCudaPath dev 1 busId 0000:00:17.0 path /sys/devices/pci0000:00
+[1,15]<stdout>:ip-172-31-3-127:43:574 [7] NCCL INFO NET/OFI [7] getCudaPath dev 2 busId 0000:00:18.0 path /sys/devices/pci0000:00
+[1,15]<stdout>:ip-172-31-3-127:43:574 [7] NCCL INFO NET/OFI [7] getCudaPath dev 3 busId 0000:00:19.0 path /sys/devices/pci0000:00/
+[1,15]<stdout>:ip-172-31-3-127:43:574 [7] NCCL INFO CUDA Dev 7[7], AWS Libfabric NIC distance :  NODE NODE NODE PHB
+[1,14]<stdout>:ip-172-31-3-127:42:575 [6] NCCL INFO NET/OFI [6] getCudaPath dev 0 busId 0000:00:16.0 path /sys/devices/pci0000:00
+[1,14]<stdout>:ip-172-31-3-127:42:575 [6] NCCL INFO NET/OFI [6] getCudaPath dev 1 busId 0000:00:17.0 path /sys/devices/pci0000:00
+[1,14]<stdout>:ip-172-31-3-127:42:575 [6] NCCL INFO NET/OFI [6] getCudaPath dev 2 busId 0000:00:18.0 path /sys/devices/pci0000:00
+[1,14]<stdout>:ip-172-31-3-127:42:575 [6] NCCL INFO NET/OFI [6] getCudaPath dev 3 busId 0000:00:19.0 path /sys/devices/pci0000:00/
+[1,14]<stdout>:ip-172-31-3-127:42:575 [6] NCCL INFO CUDA Dev 6[6], AWS Libfabric NIC distance :  NODE NODE NODE PHB
+[1,10]<stdout>:ip-172-31-3-127:38:579 [2] NCCL INFO NET/OFI [2] getCudaPath dev 1 busId 0000:00:17.0 path /sys/devices/pci0000:00/
+[1,10]<stdout>:ip-172-31-3-127:38:579 [2] NCCL INFO NET/OFI [2] getCudaPath dev 2 busId 0000:00:18.0 path /sys/devices/pci0000:00
+[1,10]<stdout>:ip-172-31-3-127:38:579 [2] NCCL INFO NET/OFI [2] getCudaPath dev 3 busId 0000:00:19.0 path /sys/devices/pci0000:00
+[1,10]<stdout>:ip-172-31-3-127:38:579 [2] NCCL INFO CUDA Dev 2[2], AWS Libfabric NIC distance :  NODE PHB NODE NODE
+[1,3]<stdout>:ip-172-31-6-189:152:687 [3] NCCL INFO NET/OFI [3] getCudaPath dev 0 busId 0000:00:16.0 path /sys/devices/pci0000:00
+[1,3]<stdout>:ip-172-31-6-189:152:687 [3] NCCL INFO NET/OFI [3] getCudaPath dev 1 busId 0000:00:17.0 path /sys/devices/pci0000:00/
+[1,3]<stdout>:ip-172-31-6-189:152:687 [3] NCCL INFO NET/OFI [3] getCudaPath dev 2 busId 0000:00:18.0 path /sys/devices/pci0000:00
+[1,3]<stdout>:ip-172-31-6-189:152:687 [3] NCCL INFO NET/OFI [3] getCudaPath dev 3 busId 0000:00:19.0 path /sys/devices/pci0000:00
+[1,3]<stdout>:ip-172-31-6-189:152:687 [3] NCCL INFO CUDA Dev 3[3], AWS Libfabric NIC distance :  NODE PHB NODE NODE
+[1,5]<stdout>:ip-172-31-6-189:154:689 [5] NCCL INFO NET/OFI [5] getCudaPath dev 0 busId 0000:00:16.0 path /sys/devices/pci0000:00
+[1,5]<stdout>:ip-172-31-6-189:154:689 [5] NCCL INFO NET/OFI [5] getCudaPath dev 1 busId 0000:00:17.0 path /sys/devices/pci0000:00
+[1,5]<stdout>:ip-172-31-6-189:154:689 [5] NCCL INFO NET/OFI [5] getCudaPath dev 2 busId 0000:00:18.0 path /sys/devices/pci0000:00/
+[1,5]<stdout>:ip-172-31-6-189:154:689 [5] NCCL INFO NET/OFI [5] getCudaPath dev 3 busId 0000:00:19.0 path /sys/devices/pci0000:00
+[1,5]<stdout>:ip-172-31-6-189:154:689 [5] NCCL INFO CUDA Dev 5[5], AWS Libfabric NIC distance :  NODE NODE PHB NODE
+[1,1]<stdout>:ip-172-31-6-189:150:686 [1] NCCL INFO NET/OFI [1] getCudaPath dev 0 busId 0000:00:16.0 path /sys/devices/pci0000:00/
+[1,1]<stdout>:ip-172-31-6-189:150:686 [1] NCCL INFO NET/OFI [1] getCudaPath dev 1 busId 0000:00:17.0 path /sys/devices/pci0000:00
+[1,1]<stdout>:ip-172-31-6-189:150:686 [1] NCCL INFO NET/OFI [1] getCudaPath dev 2 busId 0000:00:18.0 path /sys/devices/pci0000:00
+[1,1]<stdout>:ip-172-31-6-189:150:686 [1] NCCL INFO NET/OFI [1] getCudaPath dev 3 busId 0000:00:19.0 path /sys/devices/pci0000:00
+[1,1]<stdout>:ip-172-31-6-189:150:686 [1] NCCL INFO CUDA Dev 1[1], AWS Libfabric NIC distance :  PHB NODE NODE NODE
+[1,4]<stdout>:ip-172-31-6-189:153:691 [4] NCCL INFO NET/OFI [4] getCudaPath dev 0 busId 0000:00:16.0 path /sys/devices/pci0000:00
+[1,4]<stdout>:ip-172-31-6-189:153:691 [4] NCCL INFO NET/OFI [4] getCudaPath dev 1 busId 0000:00:17.0 path /sys/devices/pci0000:00
+[1,4]<stdout>:ip-172-31-6-189:153:691 [4] NCCL INFO NET/OFI [4] getCudaPath dev 2 busId 0000:00:18.0 path /sys/devices/pci0000:00/
+[1,4]<stdout>:ip-172-31-6-189:153:691 [4] NCCL INFO NET/OFI [4] getCudaPath dev 3 busId 0000:00:19.0 path /sys/devices/pci0000:00
+[1,4]<stdout>:ip-172-31-6-189:153:691 [4] NCCL INFO CUDA Dev 4[4], AWS Libfabric NIC distance :  NODE NODE PHB NODE
+[1,6]<stdout>:ip-172-31-6-189:155:688 [6] NCCL INFO NET/OFI [6] getCudaPath dev 0 busId 0000:00:16.0 path /sys/devices/pci0000:00
+[1,6]<stdout>:ip-172-31-6-189:155:688 [6] NCCL INFO NET/OFI [6] getCudaPath dev 1 busId 0000:00:17.0 path /sys/devices/pci0000:00
+[1,6]<stdout>:ip-172-31-6-189:155:688 [6] NCCL INFO NET/OFI [6] getCudaPath dev 2 busId 0000:00:18.0 path /sys/devices/pci0000:00
+[1,6]<stdout>:ip-172-31-6-189:155:688 [6] NCCL INFO NET/OFI [6] getCudaPath dev 3 busId 0000:00:19.0 path /sys/devices/pci0000:00/
+[1,6]<stdout>:ip-172-31-6-189:155:688 [6] NCCL INFO CUDA Dev 6[6], AWS Libfabric NIC distance :  NODE NODE NODE PHB
+[1,0]<stdout>:ip-172-31-6-189:149:685 [0] NCCL INFO NET/OFI [0] getCudaPath dev 0 busId 0000:00:16.0 path /sys/devices/pci0000:00/
+[1,0]<stdout>:ip-172-31-6-189:149:685 [0] NCCL INFO NET/OFI [0] getCudaPath dev 1 busId 0000:00:17.0 path /sys/devices/pci0000:00
+[1,7]<stdout>:ip-172-31-6-189:156:690 [7] NCCL INFO NET/OFI [7] getCudaPath dev 0 busId 0000:00:16.0 path /sys/devices/pci0000:00
+[1,7]<stdout>:ip-172-31-6-189:156:690 [7] NCCL INFO NET/OFI [7] getCudaPath dev 1 busId 0000:00:17.0 path /sys/devices/pci0000:00
+[1,0]<stdout>:ip-172-31-6-189:149:685 [0] NCCL INFO NET/OFI [0] getCudaPath dev 2 busId 0000:00:18.0 path /sys/devices/pci0000:00
+[1,7]<stdout>:ip-172-31-6-189:156:690 [7] NCCL INFO NET/OFI [7] getCudaPath dev 2 busId 0000:00:18.0 path /sys/devices/pci0000:00
+[1,0]<stdout>:ip-172-31-6-189:149:685 [0] NCCL INFO NET/OFI [0] getCudaPath dev 3 busId 0000:00:19.0 path /sys/devices/pci0000:00
+[1,7]<stdout>:ip-172-31-6-189:156:690 [7] NCCL INFO NET/OFI [7] getCudaPath dev 3 busId 0000:00:19.0 path /sys/devices/pci0000:00/
+[1,7]<stdout>:ip-172-31-6-189:156:690 [7] NCCL INFO CUDA Dev 7[7], AWS Libfabric NIC distance :  NODE NODE NODE PHB
+[1,0]<stdout>:ip-172-31-6-189:149:685 [0] NCCL INFO CUDA Dev 0[0], AWS Libfabric NIC distance :  PHB NODE NODE NODE
+[1,2]<stdout>:ip-172-31-6-189:151:692 [2] NCCL INFO NET/OFI [2] getCudaPath dev 0 busId 0000:00:16.0 path /sys/devices/pci0000:00
+[1,2]<stdout>:ip-172-31-6-189:151:692 [2] NCCL INFO NET/OFI [2] getCudaPath dev 1 busId 0000:00:17.0 path /sys/devices/pci0000:00/
+[1,2]<stdout>:ip-172-31-6-189:151:692 [2] NCCL INFO NET/OFI [2] getCudaPath dev 2 busId 0000:00:18.0 path /sys/devices/pci0000:00
+[1,2]<stdout>:ip-172-31-6-189:151:692 [2] NCCL INFO NET/OFI [2] getCudaPath dev 3 busId 0000:00:19.0 path /sys/devices/pci0000:00
+[1,2]<stdout>:ip-172-31-6-189:151:692 [2] NCCL INFO CUDA Dev 2[2], AWS Libfabric NIC distance :  NODE PHB NODE NODE
+[1,0]<stdout>:ip-172-31-6-189:149:685 [0] NCCL INFO Channel 00 :    0   2   3   7   4   6   5   1   8  10  11  15  12  14  13   9
+[1,0]<stdout>:ip-172-31-6-189:149:685 [0] NCCL INFO Channel 01 :    0   1   5   6   4   7   3  10   8   9  13  14  12  15  11   2
+[1,0]<stdout>:ip-172-31-6-189:149:685 [0] NCCL INFO Channel 02 :    0   3   1   2   6   7   5  12   8  11   9  10  14  15  13   4
+[1,0]<stdout>:ip-172-31-6-189:149:685 [0] NCCL INFO Channel 03 :    0   4   5   7  14  10   9  11   8  12  13  15   6   2   1   3
+[1,0]<stdout>:ip-172-31-6-189:149:685 [0] NCCL INFO Channel 04 :    0   2   3   7   4   6   5   1   8  10  11  15  12  14  13   9
+[1,0]<stdout>:ip-172-31-6-189:149:685 [0] NCCL INFO Channel 05 :    0   1   5   6   4   7   3  10   8   9  13  14  12  15  11   2
+[1,0]<stdout>:ip-172-31-6-189:149:685 [0] NCCL INFO Channel 06 :    0   3   1   2   6   7   5  12   8  11   9  10  14  15  13   4
+[1,0]<stdout>:ip-172-31-6-189:149:685 [0] NCCL INFO Channel 07 :    0   4   5   7  14  10   9  11   8  12  13  15   6   2   1   3
+[1,8]<stdout>:ip-172-31-3-127:36:572 [0] NCCL INFO NET/OFI [0] getCudaPath dev 0 busId 0000:00:16.0 path /sys/devices/pci0000:00/
+[1,8]<stdout>:ip-172-31-3-127:36:572 [0] NCCL INFO Ring 00 : 1 -> 8 [receive] via NET/AWS Libfabric/0
+[1,8]<stdout>:
+[1,8]<stdout>:ip-172-31-3-127:36:572 [0] create_nccl_ofi_component:496 NCCL WARN NET/OFI Couldn't enable endpoint. RC: -12, ERROR: Cannot allocate memory
+[1,8]<stdout>:ip-172-31-3-127:36:572 [0] NCCL INFO include/net.h:21 -> 2
+[1,8]<stdout>:ip-172-31-3-127:36:572 [0] NCCL INFO transport/net.cc:334 -> 2
+[1,8]<stdout>:ip-172-31-3-127:36:572 [0] NCCL INFO init.cc:340 -> 2
+[1,8]<stdout>:ip-172-31-3-127:36:572 [0] NCCL INFO init.cc:650 -> 2
+[1,8]<stdout>:ip-172-31-3-127:36:572 [0] NCCL INFO init.cc:815 -> 2
+[1,8]<stdout>:ip-172-31-3-127:36:572 [0] NCCL INFO init.cc:951 -> 2
+[1,0]<stdout>:ip-172-31-6-189:149:685 [0] NCCL INFO NET/OFI [0] getCudaPath dev 0 busId 0000:00:16.0 path /sys/devices/pci0000:00/
+[1,0]<stdout>:ip-172-31-6-189:149:685 [0] NCCL INFO Ring 00 : 9 -> 0 [receive] via NET/AWS Libfabric/0
+[1,0]<stdout>:
+[1,0]<stdout>:ip-172-31-6-189:149:685 [0] create_nccl_ofi_component:496 NCCL WARN NET/OFI Couldn't enable endpoint. RC: -12, ERROR: Cannot allocate memory
+[1,0]<stdout>:ip-172-31-6-189:149:685 [0] NCCL INFO include/net.h:21 -> 2
+[1,0]<stdout>:ip-172-31-6-189:149:685 [0] NCCL INFO transport/net.cc:334 -> 2
+[1,0]<stdout>:ip-172-31-6-189:149:685 [0] NCCL INFO init.cc:340 -> 2
+[1,0]<stdout>:ip-172-31-6-189:149:685 [0] NCCL INFO init.cc:650 -> 2
+[1,0]<stdout>:ip-172-31-6-189:149:685 [0] NCCL INFO init.cc:815 -> 2
+[1,0]<stdout>:ip-172-31-6-189:149:685 [0] NCCL INFO init.cc:951 -> 2
+[1,12]<stdout>:ip-172-31-3-127:40:578 [4] NCCL INFO Ring 00 : 12[4] -> 14[6] via P2P/IPC
+[1,10]<stdout>:ip-172-31-3-127:38:579 [2] NCCL INFO Ring 00 : 10[2] -> 11[3] via P2P/IPC
+[1,11]<stdout>:ip-172-31-3-127:39:580 [3] NCCL INFO Ring 00 : 11[3] -> 15[7] via P2P/IPC
+[1,15]<stdout>:ip-172-31-3-127:43:574 [7] NCCL INFO Ring 00 : 15[7] -> 12[4] via P2P/IPC
+[1,13]<stdout>:ip-172-31-3-127:41:581 [5] NCCL INFO Ring 00 : 13[5] -> 9[1] via P2P/IPC
+[1,9]<stdout>:ip-172-31-3-127:37:573 [1] NCCL INFO NET/OFI [1] getCudaPath dev 0 busId 0000:00:16.0 path /sys/devices/pci0000:00/
+[1,5]<stdout>:ip-172-31-6-189:154:689 [5] NCCL INFO Ring 00 : 5[5] -> 1[1] via P2P/IPC
+[1,14]<stdout>:ip-172-31-3-127:42:575 [6] NCCL INFO Ring 00 : 14[6] -> 13[5] via P2P/IPC
+[1,1]<stdout>:ip-172-31-6-189:150:686 [1] NCCL INFO NET/OFI [1] getCudaPath dev 0 busId 0000:00:16.0 path /sys/devices/pci0000:00/
+[1,7]<stdout>:ip-172-31-6-189:156:690 [7] NCCL INFO Ring 00 : 7[7] -> 4[4] via P2P/IPC

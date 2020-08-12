@@ -1,0 +1,23 @@
+provider: efa
+    fabric: EFA-fe80::4a:78ff:fef8:fa03
+    domain: efa_0-rdm
+    version: 2.0
+    type: FI_EP_RDM
+    protocol: FI_PROTO_EFA
+provider: efa
+    fabric: EFA-fe80::4a:78ff:fef8:fa03
+    domain: efa_0-dgrm
+    version: 2.0
+    type: FI_EP_DGRAM
+    protocol: FI_PROTO_EFA
+provider: efa;ofi_rxd
+    fabric: EFA-fe80::4a:78ff:fef8:fa03
+    domain: efa_0-dgrm
+    version: 1.0
+    type: FI_EP_RDM
+    protocol: FI_PROTO_RXD
+
+ EFA installer version: 1.5.1
+# Debug packages installed: yes
+# Packages installed:
+ibacm_25.0-1_amd64 ibverbs-providers_25.0-1_amd64 ibverbs-utils_25.0-1_amd64 infiniband-diags_25.0-1_amd64 libfabric-bin_1.8.0amzn1.0_amd64 libfabric-dev_1.8.0amzn1.0_amd64 libfabric1_1.8.0amzn1.0_amd64 libibmad-dev_25.0-1_amd64 libibmad5_25.0-1_amd64 libibnetdisc-dev_25.0-1_amd64 libibnetdisc5_25.0-1_amd64 libibumad-dev_25.0-1_amd64 libibumad3_25.0-1_amd64 libibverbs-dev_25.0-1_amd64 libibverbs1_25.0-1_amd64 librdmacm-dev_25.0-1_amd64 librdmacm1_25.0-1_amd64 openmpi_3.1.4-2_amd64 rdma-core_25.0-1_amd64 rdmacm-utils_25.0-1_amd64 libfabric1-dbg_1.8.0amzn1.0_amd64 libibmad5-dbg_25.0-1_amd64 libibnetdisc5-dbg_25.0-1_amd64 libibumad3-dbg_25.0-1_amd64 libibverbs1-dbg_25.0-1_amd64 librdmacm1-dbg_25.0-1_amd64

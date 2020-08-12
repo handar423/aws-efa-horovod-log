@@ -1,0 +1,28 @@
+provider: efa
+    fabric: EFA-fe80::4a:78ff:fef8:fa03
+    domain: efa_0-rdm
+    version: 2.0
+    type: FI_EP_RDM
+    protocol: FI_PROTO_EFA
+provider: efa
+    fabric: EFA-fe80::4a:78ff:fef8:fa03
+    domain: efa_0-dgrm
+    version: 2.0
+    type: FI_EP_DGRAM
+    protocol: FI_PROTO_EFA
+provider: efa;ofi_rxd
+    fabric: EFA-fe80::4a:78ff:fef8:fa03
+    domain: efa_0-dgrm
+    version: 1.0
+    type: FI_EP_RDM
+    protocol: FI_PROTO_RXD
+
+SHM transfer will be disabled because of ptrace protection.
+To enable SHM transfer, please refer to the man page fi_efa.7 for more information.
+Also note that turning off ptrace protection has security implications. If you cannot
+turn it off, you can suppress this message by setting FI_EFA_ENABLE_SHM_TRANSFER=0
+
+ EFA installer version: 1.8.3
+# Debug packages installed: yes
+# Packages installed:
+ibacm_25.0-1_amd64 ibverbs-providers_25.0-1_amd64 ibverbs-utils_25.0-1_amd64 infiniband-diags_25.0-1_amd64 libfabric-aws-bin_1.9.0amzn1.1_amd64 libfabric-aws-dev_1.9.0amzn1.1_amd64 libfabric1-aws_1.9.0amzn1.1_amd64 libibmad-dev_25.0-1_amd64 libibmad5_25.0-1_amd64 libibnetdisc-dev_25.0-1_amd64 libibnetdisc5_25.0-1_amd64 libibumad-dev_25.0-1_amd64 libibumad3_25.0-1_amd64 libibverbs-dev_25.0-1_amd64 libibverbs1_25.0-1_amd64 librdmacm-dev_25.0-1_amd64 librdmacm1_25.0-1_amd64 openmpi40-aws_4.0.2-1_amd64 rdma-core_25.0-1_amd64 rdmacm-utils_25.0-1_amd64 libfabric1-aws-dbg_1.9.0amzn1.1_amd64 libibmad5-dbg_25.0-1_amd64 libibnetdisc5-dbg_25.0-1_amd64 libibumad3-dbg_25.0-1_amd64 libibverbs1-dbg_25.0-1_amd64 librdmacm1-dbg_25.0-1_amd64

@@ -1,0 +1,288 @@
+Exec: NCCL_DEBUG=INFO HOROVOD_NUM_NCCL_STREAMS=4 horovodrun -np 16 -H localhost:8,172.31.3.127:8 --mpi-args="-x PATH -x LD_LIBRARY_PATH -x FI_PROVIDER=efa -x FI_EFA_TX_MIN_CREDITS=64 -x NCCL_TREE_THRESHOLD=0" python3 /home/cluster/distributed-training/test_scripts/pytorch_synthetic_benchmark.py --model resnet101 --batch-size 32 |& grep -v "Read -1"
+---------- training log
+Warning: Permanently added '[172.31.3.127]:2022' (RSA) to the list of known hosts.
+[1,5]<stdout>:/home/cluster/horovod_logs/hooks/hook-20200812-033331-rank5.log
+[1,2]<stdout>:/home/cluster/horovod_logs/hooks/hook-20200812-033331-rank2.log
+[1,7]<stdout>:/home/cluster/horovod_logs/hooks/hook-20200812-033331-rank7.log
+[1,5]<stdout>:create dir: /home/cluster/horovod_logs/mpi_events/, status: 1
+[1,5]<stdout>:logfile/home/cluster/horovod_logs/mpi_events/mpi-20200812-033331-rank5.log
+[1,0]<stdout>:/home/cluster/horovod_logs/hooks/hook-20200812-033331-rank0.log
+[1,2]<stdout>:create dir: /home/cluster/horovod_logs/mpi_events/, status: 1
+[1,2]<stdout>:logfile/home/cluster/horovod_logs/mpi_events/mpi-20200812-033331-rank2.log
+[1,6]<stdout>:/home/cluster/horovod_logs/hooks/hook-20200812-033331-rank6.log
+[1,1]<stdout>:/home/cluster/horovod_logs/hooks/hook-20200812-033331-rank1.log
+[1,10]<stdout>:/home/cluster/horovod_logs/hooks/hook-20200812-033331-rank10.log
+[1,9]<stdout>:/home/cluster/horovod_logs/hooks/hook-20200812-033331-rank9.log
+[1,7]<stdout>:create dir: /home/cluster/horovod_logs/mpi_events/, status: 1
+[1,7]<stdout>:logfile/home/cluster/horovod_logs/mpi_events/mpi-20200812-033331-rank7.log
+[1,4]<stdout>:/home/cluster/horovod_logs/hooks/hook-20200812-033331-rank4.log
+[1,3]<stdout>:/home/cluster/horovod_logs/hooks/hook-20200812-033331-rank3.log
+[1,0]<stdout>:create dir: /home/cluster/horovod_logs/mpi_events/, status: 1
+[1,0]<stdout>:logfile/home/cluster/horovod_logs/mpi_events/mpi-20200812-033331-rank0.log
+[1,10]<stdout>:create dir: /home/cluster/horovod_logs/mpi_events/, status: 1
+[1,10]<stdout>:logfile/home/cluster/horovod_logs/mpi_events/mpi-20200812-033331-rank10.log
+[1,9]<stdout>:create dir: /home/cluster/horovod_logs/mpi_events/, status: 1
+[1,9]<stdout>:logfile/home/cluster/horovod_logs/mpi_events/mpi-20200812-033331-rank9.log
+[1,6]<stdout>:create dir: /home/cluster/horovod_logs/mpi_events/, status: 1
+[1,6]<stdout>:logfile/home/cluster/horovod_logs/mpi_events/mpi-20200812-033331-rank6.log
+[1,1]<stdout>:create dir: /home/cluster/horovod_logs/mpi_events/, status: 1
+[1,1]<stdout>:logfile/home/cluster/horovod_logs/mpi_events/mpi-20200812-033331-rank1.log
+[1,3]<stdout>:create dir: /home/cluster/horovod_logs/mpi_events/, status: 1
+[1,3]<stdout>:logfile/home/cluster/horovod_logs/mpi_events/mpi-20200812-033332-rank3.log
+[1,4]<stdout>:create dir: /home/cluster/horovod_logs/mpi_events/, status: 1
+[1,4]<stdout>:logfile/home/cluster/horovod_logs/mpi_events/mpi-20200812-033332-rank4.log
+[1,13]<stdout>:/home/cluster/horovod_logs/hooks/hook-20200812-033332-rank13.log
+[1,15]<stdout>:/home/cluster/horovod_logs/hooks/hook-20200812-033332-rank15.log
+[1,11]<stdout>:/home/cluster/horovod_logs/hooks/hook-20200812-033332-rank11.log
+[1,13]<stdout>:create dir: /home/cluster/horovod_logs/mpi_events/, status: 1
+[1,13]<stdout>:logfile/home/cluster/horovod_logs/mpi_events/mpi-20200812-033332-rank13.log
+[1,15]<stdout>:create dir: /home/cluster/horovod_logs/mpi_events/, status: 1
+[1,15]<stdout>:logfile/home/cluster/horovod_logs/mpi_events/mpi-20200812-033332-rank15.log
+[1,11]<stdout>:create dir: /home/cluster/horovod_logs/mpi_events/, status: 1
+[1,11]<stdout>:logfile/home/cluster/horovod_logs/mpi_events/mpi-20200812-033332-rank11.log
+[1,8]<stdout>:/home/cluster/horovod_logs/hooks/hook-20200812-033332-rank8.log
+[1,14]<stdout>:/home/cluster/horovod_logs/hooks/hook-20200812-033332-rank14.log
+[1,8]<stdout>:create dir: /home/cluster/horovod_logs/mpi_events/, status: 1
+[1,8]<stdout>:logfile/home/cluster/horovod_logs/mpi_events/mpi-20200812-033332-rank8.log
+[1,14]<stdout>:create dir: /home/cluster/horovod_logs/mpi_events/, status: 1
+[1,14]<stdout>:logfile/home/cluster/horovod_logs/mpi_events/mpi-20200812-033332-rank14.log
+[1,12]<stdout>:/home/cluster/horovod_logs/hooks/hook-20200812-033332-rank12.log
+[1,12]<stdout>:create dir: /home/cluster/horovod_logs/mpi_events/, status: 1
+[1,12]<stdout>:logfile/home/cluster/horovod_logs/mpi_events/mpi-20200812-033332-rank12.log
+[1,0]<stdout>:Model: resnet101
+[1,0]<stdout>:Batch size: 32
+[1,0]<stdout>:Number of GPUs: 16
+[1,0]<stdout>:Running warmup...
+[1,0]<stdout>:ip-172-31-6-189:150:686 [0] NCCL INFO Bootstrap : Using [0]ens5:172.31.6.189<0>
+[1,0]<stdout>:ip-172-31-6-189:150:686 [0] NCCL INFO NET/OFI Forcing AWS OFI ndev 4
+[1,0]<stdout>:ip-172-31-6-189:150:686 [0] NCCL INFO NET/OFI Selected Provider is efa
+[1,0]<stdout>:NCCL version 2.4.8+cuda10.0
+[1,6]<stdout>:ip-172-31-6-189:156:695 [6] NCCL INFO Bootstrap : Using [0]ens5:172.31.6.189<0>
+[1,7]<stdout>:ip-172-31-6-189:157:687 [7] NCCL INFO Bootstrap : Using [0]ens5:172.31.6.189<0>
+[1,2]<stdout>:ip-172-31-6-189:152:694 [2] NCCL INFO Bootstrap : Using [0]ens5:172.31.6.189<0>
+[1,1]<stdout>:ip-172-31-6-189:151:692 [1] NCCL INFO Bootstrap : Using [0]ens5:172.31.6.189<0>
+[1,9]<stdout>:ip-172-31-3-127:38:579 [1] NCCL INFO Bootstrap : Using [0]ens5:172.31.3.127<0>
+[1,3]<stdout>:ip-172-31-6-189:153:691 [3] NCCL INFO Bootstrap : Using [0]ens5:172.31.6.189<0>
+[1,14]<stdout>:ip-172-31-3-127:43:574 [6] NCCL INFO Bootstrap : Using [0]ens5:172.31.3.127<0>
+[1,15]<stdout>:ip-172-31-3-127:44:575 [7] NCCL INFO Bootstrap : Using [0]ens5:172.31.3.127<0>
+[1,13]<stdout>:ip-172-31-3-127:42:576 [5] NCCL INFO Bootstrap : Using [0]ens5:172.31.3.127<0>
+[1,5]<stdout>:ip-172-31-6-189:155:696 [5] NCCL INFO Bootstrap : Using [0]ens5:172.31.6.189<0>
+[1,4]<stdout>:ip-172-31-6-189:154:697 [4] NCCL INFO Bootstrap : Using [0]ens5:172.31.6.189<0>
+[1,12]<stdout>:ip-172-31-3-127:41:573 [4] NCCL INFO Bootstrap : Using [0]ens5:172.31.3.127<0>
+[1,9]<stdout>:ip-172-31-3-127:38:579 [1] NCCL INFO NET/OFI Forcing AWS OFI ndev 4
+[1,9]<stdout>:ip-172-31-3-127:38:579 [1] NCCL INFO NET/OFI Selected Provider is efa
+[1,14]<stdout>:ip-172-31-3-127:43:574 [6] NCCL INFO NET/OFI Forcing AWS OFI ndev 4
+[1,14]<stdout>:ip-172-31-3-127:43:574 [6] NCCL INFO NET/OFI Selected Provider is efa
+[1,10]<stdout>:ip-172-31-3-127:39:577 [2] NCCL INFO Bootstrap : Using [0]ens5:172.31.3.127<0>
+[1,13]<stdout>:ip-172-31-3-127:42:576 [5] NCCL INFO NET/OFI Forcing AWS OFI ndev 4
+[1,13]<stdout>:ip-172-31-3-127:42:576 [5] NCCL INFO NET/OFI Selected Provider is efa
+[1,12]<stdout>:ip-172-31-3-127:41:573 [4] NCCL INFO NET/OFI Forcing AWS OFI ndev 4
+[1,12]<stdout>:ip-172-31-3-127:41:573 [4] NCCL INFO NET/OFI Selected Provider is efa
+[1,15]<stdout>:ip-172-31-3-127:44:575 [7] NCCL INFO NET/OFI Forcing AWS OFI ndev 4
+[1,15]<stdout>:ip-172-31-3-127:44:575 [7] NCCL INFO NET/OFI Selected Provider is efa
+[1,10]<stdout>:ip-172-31-3-127:39:577 [2] NCCL INFO NET/OFI Forcing AWS OFI ndev 4
+[1,10]<stdout>:ip-172-31-3-127:39:577 [2] NCCL INFO NET/OFI Selected Provider is efa
+[1,1]<stdout>:ip-172-31-6-189:151:692 [1] NCCL INFO NET/OFI Forcing AWS OFI ndev 4
+[1,1]<stdout>:ip-172-31-6-189:151:692 [1] NCCL INFO NET/OFI Selected Provider is efa
+[1,6]<stdout>:ip-172-31-6-189:156:695 [6] NCCL INFO NET/OFI Forcing AWS OFI ndev 4
+[1,6]<stdout>:ip-172-31-6-189:156:695 [6] NCCL INFO NET/OFI Selected Provider is efa
+[1,2]<stdout>:ip-172-31-6-189:152:694 [2] NCCL INFO NET/OFI Forcing AWS OFI ndev 4
+[1,2]<stdout>:ip-172-31-6-189:152:694 [2] NCCL INFO NET/OFI Selected Provider is efa
+[1,3]<stdout>:ip-172-31-6-189:153:691 [3] NCCL INFO NET/OFI Forcing AWS OFI ndev 4
+[1,3]<stdout>:ip-172-31-6-189:153:691 [3] NCCL INFO NET/OFI Selected Provider is efa
+[1,7]<stdout>:ip-172-31-6-189:157:687 [7] NCCL INFO NET/OFI Forcing AWS OFI ndev 4
+[1,7]<stdout>:ip-172-31-6-189:157:687 [7] NCCL INFO NET/OFI Selected Provider is efa
+[1,5]<stdout>:ip-172-31-6-189:155:696 [5] NCCL INFO NET/OFI Forcing AWS OFI ndev 4
+[1,5]<stdout>:ip-172-31-6-189:155:696 [5] NCCL INFO NET/OFI Selected Provider is efa
+[1,4]<stdout>:ip-172-31-6-189:154:697 [4] NCCL INFO NET/OFI Forcing AWS OFI ndev 4
+[1,4]<stdout>:ip-172-31-6-189:154:697 [4] NCCL INFO NET/OFI Selected Provider is efa
+[1,11]<stdout>:ip-172-31-3-127:40:580 [3] NCCL INFO Bootstrap : Using [0]ens5:172.31.3.127<0>
+[1,11]<stdout>:ip-172-31-3-127:40:580 [3] NCCL INFO NET/OFI Forcing AWS OFI ndev 4
+[1,11]<stdout>:ip-172-31-3-127:40:580 [3] NCCL INFO NET/OFI Selected Provider is efa
+[1,8]<stdout>:ip-172-31-3-127:37:578 [0] NCCL INFO Bootstrap : Using [0]ens5:172.31.3.127<0>
+[1,8]<stdout>:ip-172-31-3-127:37:578 [0] NCCL INFO NET/OFI Forcing AWS OFI ndev 4
+[1,8]<stdout>:ip-172-31-3-127:37:578 [0] NCCL INFO NET/OFI Selected Provider is efa
+[1,1]<stdout>:ip-172-31-6-189:151:692 [1] NCCL INFO Setting affinity for GPU 1 to ffffffff,ffffffff,ffffffff
+[1,0]<stdout>:ip-172-31-6-189:150:686 [0] NCCL INFO Setting affinity for GPU 0 to ffffffff,ffffffff,ffffffff
+[1,6]<stdout>:ip-172-31-6-189:156:695 [6] NCCL INFO Setting affinity for GPU 6 to ffffffff,ffffffff,ffffffff
+[1,3]<stdout>:ip-172-31-6-189:153:691 [3] NCCL INFO Setting affinity for GPU 3 to ffffffff,ffffffff,ffffffff
+[1,2]<stdout>:ip-172-31-6-189:152:694 [2] NCCL INFO Setting affinity for GPU 2 to ffffffff,ffffffff,ffffffff
+[1,4]<stdout>:ip-172-31-6-189:154:697 [4] NCCL INFO Setting affinity for GPU 4 to ffffffff,ffffffff,ffffffff
+[1,5]<stdout>:ip-172-31-6-189:155:696 [5] NCCL INFO Setting affinity for GPU 5 to ffffffff,ffffffff,ffffffff
+[1,7]<stdout>:ip-172-31-6-189:157:687 [7] NCCL INFO Setting affinity for GPU 7 to ffffffff,ffffffff,ffffffff
+[1,5]<stdout>:ip-172-31-6-189:155:696 [5] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+[1,2]<stdout>:ip-172-31-6-189:152:694 [2] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+[1,0]<stdout>:ip-172-31-6-189:150:686 [0] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+[1,6]<stdout>:ip-172-31-6-189:156:695 [6] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+[1,3]<stdout>:ip-172-31-6-189:153:691 [3] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+[1,14]<stdout>:ip-172-31-3-127:43:574 [6] NCCL INFO Setting affinity for GPU 6 to ffffffff,ffffffff,ffffffff
+[1,14]<stdout>:ip-172-31-3-127:43:574 [6] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+[1,9]<stdout>:ip-172-31-3-127:38:579 [1] NCCL INFO Setting affinity for GPU 1 to ffffffff,ffffffff,ffffffff
+[1,9]<stdout>:ip-172-31-3-127:38:579 [1] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+[1,12]<stdout>:ip-172-31-3-127:41:573 [4] NCCL INFO Setting affinity for GPU 4 to ffffffff,ffffffff,ffffffff
+[1,15]<stdout>:ip-172-31-3-127:44:575 [7] NCCL INFO Setting affinity for GPU 7 to ffffffff,ffffffff,ffffffff
+[1,15]<stdout>:ip-172-31-3-127:44:575 [7] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+[1,10]<stdout>:ip-172-31-3-127:39:577 [2] NCCL INFO Setting affinity for GPU 2 to ffffffff,ffffffff,ffffffff
+[1,13]<stdout>:ip-172-31-3-127:42:576 [5] NCCL INFO Setting affinity for GPU 5 to ffffffff,ffffffff,ffffffff
+[1,11]<stdout>:ip-172-31-3-127:40:580 [3] NCCL INFO Setting affinity for GPU 3 to ffffffff,ffffffff,ffffffff
+[1,8]<stdout>:ip-172-31-3-127:37:578 [0] NCCL INFO Setting affinity for GPU 0 to ffffffff,ffffffff,ffffffff
+[1,11]<stdout>:ip-172-31-3-127:40:580 [3] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+[1,13]<stdout>:ip-172-31-3-127:42:576 [5] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+[1,7]<stdout>:ip-172-31-6-189:157:687 [7] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+[1,1]<stdout>:ip-172-31-6-189:151:692 [1] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+[1,4]<stdout>:ip-172-31-6-189:154:697 [4] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+[1,10]<stdout>:ip-172-31-3-127:39:577 [2] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+[1,12]<stdout>:ip-172-31-3-127:41:573 [4] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+[1,8]<stdout>:ip-172-31-3-127:37:578 [0] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+[1,9]<stdout>:ip-172-31-3-127:38:579 [1] NCCL INFO NET/OFI [1] getCudaPath dev 0 busId 0000:00:16.0 path /sys/devices/pci0000:00/
+[1,9]<stdout>:ip-172-31-3-127:38:579 [1] NCCL INFO NET/OFI [1] getCudaPath dev 1 busId 0000:00:17.0 path /sys/devices/pci0000:00
+[1,9]<stdout>:ip-172-31-3-127:38:579 [1] NCCL INFO NET/OFI [1] getCudaPath dev 2 busId 0000:00:18.0 path /sys/devices/pci0000:00
+[1,10]<stdout>:ip-172-31-3-127:39:577 [2] NCCL INFO NET/OFI [2] getCudaPath dev 0 busId 0000:00:16.0 path /sys/devices/pci0000:00
+[1,10]<stdout>:ip-172-31-3-127:39:577 [2] NCCL INFO NET/OFI [2] getCudaPath dev 1 busId 0000:00:17.0 path /sys/devices/pci0000:00/
+[1,9]<stdout>:ip-172-31-3-127:38:579 [1] NCCL INFO NET/OFI [1] getCudaPath dev 3 busId 0000:00:19.0 path /sys/devices/pci0000:00
+[1,10]<stdout>:ip-172-31-3-127:39:577 [2] NCCL INFO NET/OFI [2] getCudaPath dev 2 busId 0000:00:18.0 path /sys/devices/pci0000:00
+[1,9]<stdout>:ip-172-31-3-127:38:579 [1] NCCL INFO CUDA Dev 1[1], AWS Libfabric NIC distance :  PHB NODE NODE NODE
+[1,10]<stdout>:ip-172-31-3-127:39:577 [2] NCCL INFO NET/OFI [2] getCudaPath dev 3 busId 0000:00:19.0 path /sys/devices/pci0000:00
+[1,10]<stdout>:ip-172-31-3-127:39:577 [2] NCCL INFO CUDA Dev 2[2], AWS Libfabric NIC distance :  NODE PHB NODE NODE
+[1,11]<stdout>:ip-172-31-3-127:40:580 [3] NCCL INFO NET/OFI [3] getCudaPath dev 0 busId 0000:00:16.0 path /sys/devices/pci0000:00
+[1,11]<stdout>:ip-172-31-3-127:40:580 [3] NCCL INFO NET/OFI [3] getCudaPath dev 1 busId 0000:00:17.0 path /sys/devices/pci0000:00/
+[1,12]<stdout>:ip-172-31-3-127:41:573 [4] NCCL INFO NET/OFI [4] getCudaPath dev 0 busId 0000:00:16.0 path /sys/devices/pci0000:00
+[1,11]<stdout>:ip-172-31-3-127:40:580 [3] NCCL INFO NET/OFI [3] getCudaPath dev 2 busId 0000:00:18.0 path /sys/devices/pci0000:00
+[1,12]<stdout>:ip-172-31-3-127:41:573 [4] NCCL INFO NET/OFI [4] getCudaPath dev 1 busId 0000:00:17.0 path /sys/devices/pci0000:00
+[1,11]<stdout>:ip-172-31-3-127:40:580 [3] NCCL INFO NET/OFI [3] getCudaPath dev 3 busId 0000:00:19.0 path /sys/devices/pci0000:00
+[1,11]<stdout>:ip-172-31-3-127:40:580 [3] NCCL INFO CUDA Dev 3[3], AWS Libfabric NIC distance :  NODE PHB NODE NODE
+[1,12]<stdout>:ip-172-31-3-127:41:573 [4] NCCL INFO NET/OFI [4] getCudaPath dev 2 busId 0000:00:18.0 path /sys/devices/pci0000:00/
+[1,12]<stdout>:ip-172-31-3-127:41:573 [4] NCCL INFO NET/OFI [4] getCudaPath dev 3 busId 0000:00:19.0 path /sys/devices/pci0000:00
+[1,12]<stdout>:ip-172-31-3-127:41:573 [4] NCCL INFO CUDA Dev 4[4], AWS Libfabric NIC distance :  NODE NODE PHB NODE
+[1,13]<stdout>:ip-172-31-3-127:42:576 [5] NCCL INFO NET/OFI [5] getCudaPath dev 0 busId 0000:00:16.0 path /sys/devices/pci0000:00
+[1,13]<stdout>:ip-172-31-3-127:42:576 [5] NCCL INFO NET/OFI [5] getCudaPath dev 1 busId 0000:00:17.0 path /sys/devices/pci0000:00
+[1,14]<stdout>:ip-172-31-3-127:43:574 [6] NCCL INFO NET/OFI [6] getCudaPath dev 0 busId 0000:00:16.0 path /sys/devices/pci0000:00
+[1,13]<stdout>:ip-172-31-3-127:42:576 [5] NCCL INFO NET/OFI [5] getCudaPath dev 2 busId 0000:00:18.0 path /sys/devices/pci0000:00/
+[1,14]<stdout>:ip-172-31-3-127:43:574 [6] NCCL INFO NET/OFI [6] getCudaPath dev 1 busId 0000:00:17.0 path /sys/devices/pci0000:00
+[1,13]<stdout>:ip-172-31-3-127:42:576 [5] NCCL INFO NET/OFI [5] getCudaPath dev 3 busId 0000:00:19.0 path /sys/devices/pci0000:00
+[1,13]<stdout>:ip-172-31-3-127:42:576 [5] NCCL INFO CUDA Dev 5[5], AWS Libfabric NIC distance :  NODE NODE PHB NODE
+[1,14]<stdout>:ip-172-31-3-127:43:574 [6] NCCL INFO NET/OFI [6] getCudaPath dev 2 busId 0000:00:18.0 path /sys/devices/pci0000:00
+[1,15]<stdout>:ip-172-31-3-127:44:575 [7] NCCL INFO NET/OFI [7] getCudaPath dev 0 busId 0000:00:16.0 path /sys/devices/pci0000:00
+[1,14]<stdout>:ip-172-31-3-127:43:574 [6] NCCL INFO NET/OFI [6] getCudaPath dev 3 busId 0000:00:19.0 path /sys/devices/pci0000:00/
+[1,14]<stdout>:ip-172-31-3-127:43:574 [6] NCCL INFO CUDA Dev 6[6], AWS Libfabric NIC distance :  NODE NODE NODE PHB
+[1,15]<stdout>:ip-172-31-3-127:44:575 [7] NCCL INFO NET/OFI [7] getCudaPath dev 1 busId 0000:00:17.0 path /sys/devices/pci0000:00
+[1,15]<stdout>:ip-172-31-3-127:44:575 [7] NCCL INFO NET/OFI [7] getCudaPath dev 2 busId 0000:00:18.0 path /sys/devices/pci0000:00
+[1,15]<stdout>:ip-172-31-3-127:44:575 [7] NCCL INFO NET/OFI [7] getCudaPath dev 3 busId 0000:00:19.0 path /sys/devices/pci0000:00/
+[1,15]<stdout>:ip-172-31-3-127:44:575 [7] NCCL INFO CUDA Dev 7[7], AWS Libfabric NIC distance :  NODE NODE NODE PHB
+[1,8]<stdout>:ip-172-31-3-127:37:578 [0] NCCL INFO NET/OFI [0] getCudaPath dev 0 busId 0000:00:16.0 path /sys/devices/pci0000:00/
+[1,8]<stdout>:ip-172-31-3-127:37:578 [0] NCCL INFO NET/OFI [0] getCudaPath dev 1 busId 0000:00:17.0 path /sys/devices/pci0000:00
+[1,8]<stdout>:ip-172-31-3-127:37:578 [0] NCCL INFO NET/OFI [0] getCudaPath dev 2 busId 0000:00:18.0 path /sys/devices/pci0000:00
+[1,8]<stdout>:ip-172-31-3-127:37:578 [0] NCCL INFO NET/OFI [0] getCudaPath dev 3 busId 0000:00:19.0 path /sys/devices/pci0000:00
+[1,8]<stdout>:ip-172-31-3-127:37:578 [0] NCCL INFO CUDA Dev 0[0], AWS Libfabric NIC distance :  PHB NODE NODE NODE
+[1,5]<stdout>:ip-172-31-6-189:155:696 [5] NCCL INFO NET/OFI [5] getCudaPath dev 0 busId 0000:00:16.0 path /sys/devices/pci0000:00
+[1,5]<stdout>:ip-172-31-6-189:155:696 [5] NCCL INFO NET/OFI [5] getCudaPath dev 1 busId 0000:00:17.0 path /sys/devices/pci0000:00
+[1,5]<stdout>:ip-172-31-6-189:155:696 [5] NCCL INFO NET/OFI [5] getCudaPath dev 2 busId 0000:00:18.0 path /sys/devices/pci0000:00/
+[1,5]<stdout>:ip-172-31-6-189:155:696 [5] NCCL INFO NET/OFI [5] getCudaPath dev 3 busId 0000:00:19.0 path /sys/devices/pci0000:00
+[1,5]<stdout>:ip-172-31-6-189:155:696 [5] NCCL INFO CUDA Dev 5[5], AWS Libfabric NIC distance :  NODE NODE PHB NODE
+[1,2]<stdout>:ip-172-31-6-189:152:694 [2] NCCL INFO NET/OFI [2] getCudaPath dev 0 busId 0000:00:16.0 path /sys/devices/pci0000:00
+[1,2]<stdout>:ip-172-31-6-189:152:694 [2] NCCL INFO NET/OFI [2] getCudaPath dev 1 busId 0000:00:17.0 path /sys/devices/pci0000:00/
+[1,2]<stdout>:ip-172-31-6-189:152:694 [2] NCCL INFO NET/OFI [2] getCudaPath dev 2 busId 0000:00:18.0 path /sys/devices/pci0000:00
+[1,2]<stdout>:ip-172-31-6-189:152:694 [2] NCCL INFO NET/OFI [2] getCudaPath dev 3 busId 0000:00:19.0 path /sys/devices/pci0000:00
+[1,2]<stdout>:ip-172-31-6-189:152:694 [2] NCCL INFO CUDA Dev 2[2], AWS Libfabric NIC distance :  NODE PHB NODE NODE
+[1,6]<stdout>:ip-172-31-6-189:156:695 [6] NCCL INFO NET/OFI [6] getCudaPath dev 0 busId 0000:00:16.0 path /sys/devices/pci0000:00
+[1,6]<stdout>:ip-172-31-6-189:156:695 [6] NCCL INFO NET/OFI [6] getCudaPath dev 1 busId 0000:00:17.0 path /sys/devices/pci0000:00
+[1,6]<stdout>:ip-172-31-6-189:156:695 [6] NCCL INFO NET/OFI [6] getCudaPath dev 2 busId 0000:00:18.0 path /sys/devices/pci0000:00
+[1,6]<stdout>:ip-172-31-6-189:156:695 [6] NCCL INFO NET/OFI [6] getCudaPath dev 3 busId 0000:00:19.0 path /sys/devices/pci0000:00/
+[1,6]<stdout>:ip-172-31-6-189:156:695 [6] NCCL INFO CUDA Dev 6[6], AWS Libfabric NIC distance :  NODE NODE NODE PHB
+[1,7]<stdout>:ip-172-31-6-189:157:687 [7] NCCL INFO NET/OFI [7] getCudaPath dev 0 busId 0000:00:16.0 path /sys/devices/pci0000:00
+[1,7]<stdout>:ip-172-31-6-189:157:687 [7] NCCL INFO NET/OFI [7] getCudaPath dev 1 busId 0000:00:17.0 path /sys/devices/pci0000:00
+[1,0]<stdout>:ip-172-31-6-189:150:686 [0] NCCL INFO NET/OFI [0] getCudaPath dev 0 busId 0000:00:16.0 path /sys/devices/pci0000:00/
+[1,7]<stdout>:ip-172-31-6-189:157:687 [7] NCCL INFO NET/OFI [7] getCudaPath dev 2 busId 0000:00:18.0 path /sys/devices/pci0000:00
+[1,0]<stdout>:ip-172-31-6-189:150:686 [0] NCCL INFO NET/OFI [0] getCudaPath dev 1 busId 0000:00:17.0 path /sys/devices/pci0000:00
+[1,7]<stdout>:ip-172-31-6-189:157:687 [7] NCCL INFO NET/OFI [7] getCudaPath dev 3 busId 0000:00:19.0 path /sys/devices/pci0000:00/
+[1,7]<stdout>:ip-172-31-6-189:157:687 [7] NCCL INFO CUDA Dev 7[7], AWS Libfabric NIC distance :  NODE NODE NODE PHB
+[1,4]<stdout>:ip-172-31-6-189:154:697 [4] NCCL INFO NET/OFI [4] getCudaPath dev 0 busId 0000:00:16.0 path /sys/devices/pci0000:00
+[1,3]<stdout>:ip-172-31-6-189:153:691 [3] NCCL INFO NET/OFI [3] getCudaPath dev 0 busId 0000:00:16.0 path /sys/devices/pci0000:00
+[1,0]<stdout>:ip-172-31-6-189:150:686 [0] NCCL INFO NET/OFI [0] getCudaPath dev 2 busId 0000:00:18.0 path /sys/devices/pci0000:00
+[1,4]<stdout>:ip-172-31-6-189:154:697 [4] NCCL INFO NET/OFI [4] getCudaPath dev 1 busId 0000:00:17.0 path /sys/devices/pci0000:00
+[1,1]<stdout>:ip-172-31-6-189:151:692 [1] NCCL INFO NET/OFI [1] getCudaPath dev 0 busId 0000:00:16.0 path /sys/devices/pci0000:00/
+[1,3]<stdout>:ip-172-31-6-189:153:691 [3] NCCL INFO NET/OFI [3] getCudaPath dev 1 busId 0000:00:17.0 path /sys/devices/pci0000:00/
+[1,4]<stdout>:ip-172-31-6-189:154:697 [4] NCCL INFO NET/OFI [4] getCudaPath dev 2 busId 0000:00:18.0 path /sys/devices/pci0000:00/
+[1,0]<stdout>:ip-172-31-6-189:150:686 [0] NCCL INFO NET/OFI [0] getCudaPath dev 3 busId 0000:00:19.0 path /sys/devices/pci0000:00
+[1,4]<stdout>:ip-172-31-6-189:154:697 [4] NCCL INFO NET/OFI [4] getCudaPath dev 3 busId 0000:00:19.0 path /sys/devices/pci0000:00
+[1,1]<stdout>:ip-172-31-6-189:151:692 [1] NCCL INFO NET/OFI [1] getCudaPath dev 1 busId 0000:00:17.0 path /sys/devices/pci0000:00
+[1,0]<stdout>:ip-172-31-6-189:150:686 [0] NCCL INFO CUDA Dev 0[0], AWS Libfabric NIC distance :  PHB NODE NODE NODE
+[1,3]<stdout>:ip-172-31-6-189:153:691 [3] NCCL INFO NET/OFI [3] getCudaPath dev 2 busId 0000:00:18.0 path /sys/devices/pci0000:00
+[1,4]<stdout>:ip-172-31-6-189:154:697 [4] NCCL INFO CUDA Dev 4[4], AWS Libfabric NIC distance :  NODE NODE PHB NODE
+[1,1]<stdout>:ip-172-31-6-189:151:692 [1] NCCL INFO NET/OFI [1] getCudaPath dev 2 busId 0000:00:18.0 path /sys/devices/pci0000:00
+[1,3]<stdout>:ip-172-31-6-189:153:691 [3] NCCL INFO NET/OFI [3] getCudaPath dev 3 busId 0000:00:19.0 path /sys/devices/pci0000:00
+[1,3]<stdout>:ip-172-31-6-189:153:691 [3] NCCL INFO CUDA Dev 3[3], AWS Libfabric NIC distance :  NODE PHB NODE NODE
+[1,1]<stdout>:ip-172-31-6-189:151:692 [1] NCCL INFO NET/OFI [1] getCudaPath dev 3 busId 0000:00:19.0 path /sys/devices/pci0000:00
+[1,1]<stdout>:ip-172-31-6-189:151:692 [1] NCCL INFO CUDA Dev 1[1], AWS Libfabric NIC distance :  PHB NODE NODE NODE
+[1,0]<stdout>:ip-172-31-6-189:150:686 [0] NCCL INFO Channel 00 :    0   2   3   7   4   6   5   1   8  10  11  15  12  14  13   9
+[1,0]<stdout>:ip-172-31-6-189:150:686 [0] NCCL INFO Channel 01 :    0   1   5   6   4   7   3  10   8   9  13  14  12  15  11   2
+[1,0]<stdout>:ip-172-31-6-189:150:686 [0] NCCL INFO Channel 02 :    0   3   1   2   6   7   5  12   8  11   9  10  14  15  13   4
+[1,0]<stdout>:ip-172-31-6-189:150:686 [0] NCCL INFO Channel 03 :    0   4   5   7  14  10   9  11   8  12  13  15   6   2   1   3
+[1,0]<stdout>:ip-172-31-6-189:150:686 [0] NCCL INFO Channel 04 :    0   2   3   7   4   6   5   1   8  10  11  15  12  14  13   9
+[1,0]<stdout>:ip-172-31-6-189:150:686 [0] NCCL INFO Channel 05 :    0   1   5   6   4   7   3  10   8   9  13  14  12  15  11   2
+[1,0]<stdout>:ip-172-31-6-189:150:686 [0] NCCL INFO Channel 06 :    0   3   1   2   6   7   5  12   8  11   9  10  14  15  13   4
+[1,0]<stdout>:ip-172-31-6-189:150:686 [0] NCCL INFO Channel 07 :    0   4   5   7  14  10   9  11   8  12  13  15   6   2   1   3
+[1,0]<stdout>:ip-172-31-6-189:150:686 [0] NCCL INFO NET/OFI [0] getCudaPath dev 0 busId 0000:00:16.0 path /sys/devices/pci0000:00/
+[1,8]<stdout>:ip-172-31-3-127:37:578 [0] NCCL INFO NET/OFI [0] getCudaPath dev 0 busId 0000:00:16.0 path /sys/devices/pci0000:00/
+[1,8]<stdout>:ip-172-31-3-127:37:578 [0] NCCL INFO Ring 00 : 1 -> 8 [receive] via NET/AWS Libfabric/0
+[1,0]<stdout>:ip-172-31-6-189:150:686 [0] NCCL INFO Ring 00 : 9 -> 0 [receive] via NET/AWS Libfabric/0
+[1,8]<stdout>:
+[1,8]<stdout>:ip-172-31-3-127:37:578 [0] create_nccl_ofi_component:496 NCCL WARN NET/OFI Couldn't enable endpoint. RC: -12, ERROR: Cannot allocate memory
+[1,8]<stdout>:ip-172-31-3-127:37:578 [0] NCCL INFO include/net.h:21 -> 2
+[1,8]<stdout>:ip-172-31-3-127:37:578 [0] NCCL INFO transport/net.cc:334 -> 2
+[1,8]<stdout>:ip-172-31-3-127:37:578 [0] NCCL INFO init.cc:340 -> 2
+[1,8]<stdout>:ip-172-31-3-127:37:578 [0] NCCL INFO init.cc:650 -> 2
+[1,8]<stdout>:ip-172-31-3-127:37:578 [0] NCCL INFO init.cc:815 -> 2
+[1,8]<stdout>:ip-172-31-3-127:37:578 [0] NCCL INFO init.cc:951 -> 2
+[1,0]<stdout>:
+[1,0]<stdout>:ip-172-31-6-189:150:686 [0] create_nccl_ofi_component:496 NCCL WARN NET/OFI Couldn't enable endpoint. RC: -12, ERROR: Cannot allocate memory
+[1,0]<stdout>:ip-172-31-6-189:150:686 [0] NCCL INFO include/net.h:21 -> 2
+[1,0]<stdout>:ip-172-31-6-189:150:686 [0] NCCL INFO transport/net.cc:334 -> 2
+[1,0]<stdout>:ip-172-31-6-189:150:686 [0] NCCL INFO init.cc:340 -> 2
+[1,0]<stdout>:ip-172-31-6-189:150:686 [0] NCCL INFO init.cc:650 -> 2
+[1,0]<stdout>:ip-172-31-6-189:150:686 [0] NCCL INFO init.cc:815 -> 2
+[1,0]<stdout>:ip-172-31-6-189:150:686 [0] NCCL INFO init.cc:951 -> 2
+[1,1]<stdout>:ip-172-31-6-189:151:692 [1] NCCL INFO NET/OFI [1] getCudaPath dev 0 busId 0000:00:16.0 path /sys/devices/pci0000:00/
+[1,2]<stdout>:ip-172-31-6-189:152:694 [2] NCCL INFO Ring 00 : 2[2] -> 3[3] via P2P/IPC
+[1,3]<stdout>:ip-172-31-6-189:153:691 [3] NCCL INFO Ring 00 : 3[3] -> 7[7] via P2P/IPC
+[1,1]<stdout>:ip-172-31-6-189:151:692 [1] NCCL INFO Ring 00 : 1 -> 8 [send] via NET/AWS Libfabric/0
+[1,4]<stdout>:ip-172-31-6-189:154:697 [4] NCCL INFO Ring 00 : 4[4] -> 6[6] via P2P/IPC
+[1,5]<stdout>:ip-172-31-6-189:155:696 [5] NCCL INFO Ring 00 : 5[5] -> 1[1] via P2P/IPC
+[1,6]<stdout>:ip-172-31-6-189:156:695 [6] NCCL INFO Ring 00 : 6[6] -> 5[5] via P2P/IPC
+[1,12]<stdout>:ip-172-31-3-127:41:573 [4] NCCL INFO Ring 00 : 12[4] -> 14[6] via P2P/IPC
+[1,14]<stdout>:ip-172-31-3-127:43:574 [6] NCCL INFO Ring 00 : 14[6] -> 13[5] via P2P/IPC
+[1,9]<stdout>:ip-172-31-3-127:38:579 [1] NCCL INFO NET/OFI [1] getCudaPath dev 0 busId 0000:00:16.0 path /sys/devices/pci0000:00/
+[1,7]<stdout>:ip-172-31-6-189:157:687 [7] NCCL INFO Ring 00 : 7[7] -> 4[4] via P2P/IPC
+[1,15]<stdout>:ip-172-31-3-127:44:575 [7] NCCL INFO Ring 00 : 15[7] -> 12[4] via P2P/IPC
+[1,9]<stdout>:ip-172-31-3-127:38:579 [1] NCCL INFO Ring 00 : 9 -> 0 [send] via NET/AWS Libfabric/0
+[1,11]<stdout>:ip-172-31-3-127:40:580 [3] NCCL INFO Ring 00 : 11[3] -> 15[7] via P2P/IPC
+[1,13]<stdout>:ip-172-31-3-127:42:576 [5] NCCL INFO Ring 00 : 13[5] -> 9[1] via P2P/IPC
+[1,10]<stdout>:ip-172-31-3-127:39:577 [2] NCCL INFO Ring 00 : 10[2] -> 11[3] via P2P/IPC
+[1,3]<stdout>:ip-172-31-6-189:153:691 [3] NCCL INFO NET/OFI [3] getCudaPath dev 1 busId 0000:00:17.0 path /sys/devices/pci0000:00/
+[1,5]<stdout>:ip-172-31-6-189:155:696 [5] NCCL INFO Ring 01 : 5[5] -> 6[6] via P2P/IPC
+[1,3]<stdout>:ip-172-31-6-189:153:691 [3] NCCL INFO Ring 01 : 3 -> 10 [send] via NET/AWS Libfabric/1
+[1,6]<stdout>:ip-172-31-6-189:156:695 [6] NCCL INFO Ring 01 : 6[6] -> 4[4] via P2P/IPC
+[1,7]<stdout>:ip-172-31-6-189:157:687 [7] NCCL INFO Ring 01 : 7[7] -> 3[3] via P2P/IPC
+[1,4]<stdout>:ip-172-31-6-189:154:697 [4] NCCL INFO Ring 01 : 4[4] -> 7[7] via P2P/IPC
+[1,4]<stdout>:ip-172-31-6-189:154:697 [4] NCCL INFO NET/OFI [4] getCudaPath dev 2 busId 0000:00:18.0 path /sys/devices/pci0000:00/
+[1,4]<stdout>:ip-172-31-6-189:154:697 [4] NCCL INFO Ring 02 : 13 -> 4 [receive] via NET/AWS Libfabric/2
+[1,6]<stdout>:ip-172-31-6-189:156:695 [6] NCCL INFO Ring 02 : 6[6] -> 7[7] via P2P/IPC
+[1,7]<stdout>:ip-172-31-6-189:157:687 [7] NCCL INFO Ring 02 : 7[7] -> 5[5] via P2P/IPC
+[1,4]<stdout>:
+[1,4]<stdout>:ip-172-31-6-189:154:697 [4] create_nccl_ofi_component:496 NCCL WARN NET/OFI Couldn't enable endpoint. RC: -12, ERROR: Cannot allocate memory
+[1,4]<stdout>:ip-172-31-6-189:154:697 [4] NCCL INFO include/net.h:21 -> 2
+[1,4]<stdout>:ip-172-31-6-189:154:697 [4] NCCL INFO transport/net.cc:334 -> 2
+[1,4]<stdout>:ip-172-31-6-189:154:697 [4] NCCL INFO init.cc:340 -> 2
+[1,4]<stdout>:ip-172-31-6-189:154:697 [4] NCCL INFO init.cc:650 -> 2
+[1,4]<stdout>:ip-172-31-6-189:154:697 [4] NCCL INFO init.cc:815 -> 2
+[1,4]<stdout>:ip-172-31-6-189:154:697 [4] NCCL INFO init.cc:951 -> 2
+[1,12]<stdout>:ip-172-31-3-127:41:573 [4] NCCL INFO Ring 01 : 12[4] -> 15[7] via P2P/IPC
+[1,14]<stdout>:ip-172-31-3-127:43:574 [6] NCCL INFO Ring 01 : 14[6] -> 12[4] via P2P/IPC
+[1,11]<stdout>:ip-172-31-3-127:40:580 [3] NCCL INFO NET/OFI [3] getCudaPath dev 1 busId 0000:00:17.0 path /sys/devices/pci0000:00/
+[1,11]<stdout>:ip-172-31-3-127:40:580 [3] NCCL INFO Ring 01 : 11 -> 2 [send] via NET/AWS Libfabric/1
+[1,12]<stdout>:ip-172-31-3-127:41:573 [4] NCCL INFO NET/OFI [4] getCudaPath dev 2 busId 0000:00:18.0 path /sys/devices/pci0000:00/
+[1,12]<stdout>:ip-172-31-3-127:41:573 [4] NCCL INFO Ring 02 : 5 -> 12 [receive] via NET/AWS Libfabric/2
+[1,13]<stdout>:ip-172-31-3-127:42:576 [5] NCCL INFO Ring 01 : 13[5] -> 14[6] via P2P/IPC
+[1,12]<stdout>:
+[1,12]<stdout>:ip-172-31-3-127:41:573 [4] create_nccl_ofi_component:496 NCCL WARN NET/OFI Couldn't enable endpoint. RC: -12, ERROR: Cannot allocate memory
+[1,12]<stdout>:ip-172-31-3-127:41:573 [4] NCCL INFO include/net.h:21 -> 2
